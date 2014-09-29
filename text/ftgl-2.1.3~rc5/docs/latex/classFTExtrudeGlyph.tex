@@ -1,0 +1,75 @@
+\section{FTExtrudeGlyph Class Reference}
+\label{classFTExtrudeGlyph}\index{FTExtrudeGlyph@{FTExtrudeGlyph}}
+\doxyref{FTExtrudeGlyph}{p.}{classFTExtrudeGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating tessellated extruded polygon glyphs.  
+
+
+{\tt \#include $<$FTExtrdGlyph.h$>$}
+
+Inheritance diagram for FTExtrudeGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTExtrudeGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTExtrudeGlyph} (FT\_\-GlyphSlot glyph, float depth, float frontOutset, float backOutset, bool useDisplayList)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$FTExtrudeGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)
+\begin{CompactList}\small\item\em Render this glyph at the current pen position. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTExtrudeGlyph}{p.}{classFTExtrudeGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating tessellated extruded polygon glyphs. 
+
+Definition at line 43 of file FTExtrdGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTExtrudeGlyph@{FTExtrudeGlyph}!FTExtrudeGlyph@{FTExtrudeGlyph}}
+\index{FTExtrudeGlyph@{FTExtrudeGlyph}!FTExtrudeGlyph@{FTExtrudeGlyph}}
+\subsubsection[{FTExtrudeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTExtrudeGlyph::FTExtrudeGlyph (FT\_\-GlyphSlot {\em glyph}, \/  float {\em depth}, \/  float {\em frontOutset}, \/  float {\em backOutset}, \/  bool {\em useDisplayList})}\label{classFTExtrudeGlyph_76ca3fac3f26bf967b98464d306778cd}
+
+
+Constructor. 
+
+Sets the Error to Invalid\_\-Outline if the glyph isn't an outline.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em depth}]The distance along the z axis to extrude the glyph \item[{\em frontOutset}]outset contour size \item[{\em backOutset}]outset contour size \item[{\em useDisplayList}]Enable or disable the use of Display Lists for this glyph {\tt true} turns ON display lists. {\tt false} turns OFF display lists. \end{description}
+\end{Desc}
+\index{FTExtrudeGlyph@{FTExtrudeGlyph}!$\sim$FTExtrudeGlyph@{$\sim$FTExtrudeGlyph}}
+\index{$\sim$FTExtrudeGlyph@{$\sim$FTExtrudeGlyph}!FTExtrudeGlyph@{FTExtrudeGlyph}}
+\subsubsection[{$\sim$FTExtrudeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTExtrudeGlyph::$\sim$FTExtrudeGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTExtrudeGlyph_f83d3b160cd5cccea8c3fc343be7a9b3}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTExtrudeGlyph@{FTExtrudeGlyph}!Render@{Render}}
+\index{Render@{Render}!FTExtrudeGlyph@{FTExtrudeGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTExtrudeGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTExtrudeGlyph_48cc5da5e2e6491d79bcee8a9107bc60}
+
+
+Render this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implements {\bf FTGlyph} \doxyref{}{p.}{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTExtrdGlyph.h}\end{CompactItemize}

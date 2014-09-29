@@ -1,0 +1,539 @@
+\section{FTFont Class Reference}
+\label{classFTFont}\index{FTFont@{FTFont}}
+\doxyref{FTFont}{p.}{classFTFont} is the public interface for the \doxyref{FTGL}{p.}{namespaceFTGL} library.  
+
+
+{\tt \#include $<$FTFont.h$>$}
+
+Inheritance diagram for FTFont::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.50943cm]{classFTFont}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual {\bf $\sim$FTFont} ()
+\item 
+virtual bool {\bf Attach} (const char $\ast$fontFilePath)
+\begin{CompactList}\small\item\em Attach auxilliary file to font e.g font metrics. \item\end{CompactList}\item 
+virtual bool {\bf Attach} (const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)
+\begin{CompactList}\small\item\em Attach auxilliary data to font e.g font metrics, from memory. \item\end{CompactList}\item 
+virtual void {\bf GlyphLoadFlags} (FT\_\-Int flags)
+\begin{CompactList}\small\item\em Set the glyph loading flags. \item\end{CompactList}\item 
+virtual bool {\bf CharMap} (FT\_\-Encoding encoding)
+\begin{CompactList}\small\item\em Set the character map for the face. \item\end{CompactList}\item 
+virtual unsigned int {\bf CharMapCount} () const 
+\begin{CompactList}\small\item\em Get the number of character maps in this face. \item\end{CompactList}\item 
+virtual FT\_\-Encoding $\ast$ {\bf CharMapList} ()
+\begin{CompactList}\small\item\em Get a list of character maps in this face. \item\end{CompactList}\item 
+virtual bool {\bf FaceSize} (const unsigned int size, const unsigned int res=72)
+\begin{CompactList}\small\item\em Set the char size for the current face. \item\end{CompactList}\item 
+virtual unsigned int {\bf FaceSize} () const 
+\begin{CompactList}\small\item\em Get the current face size in points (1/72 inch). \item\end{CompactList}\item 
+virtual void {\bf Depth} (float depth)
+\begin{CompactList}\small\item\em Set the extrusion distance for the font. \item\end{CompactList}\item 
+virtual void {\bf Outset} (float outset)
+\begin{CompactList}\small\item\em Set the outset distance for the font. \item\end{CompactList}\item 
+virtual void {\bf Outset} (float front, float back)
+\begin{CompactList}\small\item\em Set the front and back outset distances for the font. \item\end{CompactList}\item 
+virtual void {\bf UseDisplayList} (bool useList)
+\begin{CompactList}\small\item\em Enable or disable the use of Display Lists inside \doxyref{FTGL}{p.}{namespaceFTGL}. \item\end{CompactList}\item 
+virtual float {\bf Ascender} () const 
+\begin{CompactList}\small\item\em Get the global ascender height for the face. \item\end{CompactList}\item 
+virtual float {\bf Descender} () const 
+\begin{CompactList}\small\item\em Gets the global descender height for the face. \item\end{CompactList}\item 
+virtual float {\bf LineHeight} () const 
+\begin{CompactList}\small\item\em Gets the line spacing for the font. \item\end{CompactList}\item 
+virtual {\bf FTBBox} {\bf BBox} (const char $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}(), {\bf FTPoint} spacing={\bf FTPoint}())
+\begin{CompactList}\small\item\em Get the bounding box for a string. \item\end{CompactList}\item 
+void {\bf BBox} (const char $\ast$string, float \&llx, float \&lly, float \&llz, float \&urx, float \&ury, float \&urz)
+\begin{CompactList}\small\item\em Get the bounding box for a string (deprecated). \item\end{CompactList}\item 
+virtual {\bf FTBBox} {\bf BBox} (const wchar\_\-t $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}(), {\bf FTPoint} spacing={\bf FTPoint}())
+\begin{CompactList}\small\item\em Get the bounding box for a string. \item\end{CompactList}\item 
+void {\bf BBox} (const wchar\_\-t $\ast$string, float \&llx, float \&lly, float \&llz, float \&urx, float \&ury, float \&urz)
+\begin{CompactList}\small\item\em Get the bounding box for a string (deprecated). \item\end{CompactList}\item 
+virtual float {\bf Advance} (const char $\ast$string, const int len=-1, {\bf FTPoint} spacing={\bf FTPoint}())
+\begin{CompactList}\small\item\em Get the advance for a string. \item\end{CompactList}\item 
+virtual float {\bf Advance} (const wchar\_\-t $\ast$string, const int len=-1, {\bf FTPoint} spacing={\bf FTPoint}())
+\begin{CompactList}\small\item\em Get the advance for a string. \item\end{CompactList}\item 
+virtual {\bf FTPoint} {\bf Render} (const char $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}(), {\bf FTPoint} spacing={\bf FTPoint}(), int renderMode=FTGL::RENDER\_\-ALL)
+\begin{CompactList}\small\item\em Render a string of characters. \item\end{CompactList}\item 
+virtual {\bf FTPoint} {\bf Render} (const wchar\_\-t $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}(), {\bf FTPoint} spacing={\bf FTPoint}(), int renderMode=FTGL::RENDER\_\-ALL)
+\begin{CompactList}\small\item\em Render a string of characters. \item\end{CompactList}\item 
+virtual FT\_\-Error {\bf Error} () const 
+\begin{CompactList}\small\item\em Queries the Font for errors. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTFont} (char const $\ast$fontFilePath)
+\begin{CompactList}\small\item\em Open and read a font file. \item\end{CompactList}\item 
+{\bf FTFont} (const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)
+\begin{CompactList}\small\item\em Open and read a font from a buffer in memory. \item\end{CompactList}\item 
+virtual {\bf FTGlyph} $\ast$ {\bf MakeGlyph} (FT\_\-GlyphSlot slot)=0
+\begin{CompactList}\small\item\em Construct a glyph of the correct type. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class {\bf FTBitmapFont}
+\item 
+class {\bf FTBufferFont}
+\item 
+class {\bf FTExtrudeFont}
+\item 
+class {\bf FTOutlineFont}
+\item 
+class {\bf FTPixmapFont}
+\item 
+class {\bf FTPolygonFont}
+\item 
+class {\bf FTTextureFont}
+\item 
+class {\bf FTFontImpl}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTFont}{p.}{classFTFont} is the public interface for the \doxyref{FTGL}{p.}{namespaceFTGL} library. 
+
+Specific font classes are derived from this class. It uses the helper classes FTFace and FTSize to access the Freetype library. This class is abstract and deriving classes must implement the protected {\tt MakeGlyph} function to create glyphs of the appropriate type.
+
+It is good practice after using these functions to test the error code returned. {\tt FT\_\-Error \doxyref{Error()}{p.}{classFTFont_1b535e3a7fef84c073988ab6f74f9ec1}}. Check the freetype file fterrdef.h for error definitions.
+
+\begin{Desc}
+\item[See also:]FTFace 
+
+FTSize \end{Desc}
+
+
+Definition at line 56 of file FTFont.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTFont@{FTFont}!FTFont@{FTFont}}
+\index{FTFont@{FTFont}!FTFont@{FTFont}}
+\subsubsection[{FTFont}]{\setlength{\rightskip}{0pt plus 5cm}FTFont::FTFont (char const $\ast$ {\em fontFilePath})\hspace{0.3cm}{\tt  [protected]}}\label{classFTFont_f7edeab8bc77784a537dc63e54315cc9}
+
+
+Open and read a font file. 
+
+Sets Error flag.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fontFilePath}]font file path. \end{description}
+\end{Desc}
+\index{FTFont@{FTFont}!FTFont@{FTFont}}
+\index{FTFont@{FTFont}!FTFont@{FTFont}}
+\subsubsection[{FTFont}]{\setlength{\rightskip}{0pt plus 5cm}FTFont::FTFont (const unsigned char $\ast$ {\em pBufferBytes}, \/  size\_\-t {\em bufferSizeInBytes})\hspace{0.3cm}{\tt  [protected]}}\label{classFTFont_8911254ec56e3b9c36891459b98beaf2}
+
+
+Open and read a font from a buffer in memory. 
+
+Sets Error flag. The buffer is owned by the client and is NOT copied by \doxyref{FTGL}{p.}{namespaceFTGL}. The pointer must be valid while using \doxyref{FTGL}{p.}{namespaceFTGL}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pBufferBytes}]the in-memory buffer \item[{\em bufferSizeInBytes}]the length of the buffer in bytes \end{description}
+\end{Desc}
+\index{FTFont@{FTFont}!$\sim$FTFont@{$\sim$FTFont}}
+\index{$\sim$FTFont@{$\sim$FTFont}!FTFont@{FTFont}}
+\subsubsection[{$\sim$FTFont}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTFont::$\sim$FTFont ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_9df9b873c582024867ff6b9dfff0face}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{FTFont@{FTFont}!Advance@{Advance}}
+\index{Advance@{Advance}!FTFont@{FTFont}}
+\subsubsection[{Advance}]{\setlength{\rightskip}{0pt plus 5cm}virtual float FTFont::Advance (const wchar\_\-t $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em spacing} = {\tt {\bf FTPoint}()})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_030a33368ab7fcbcb082909e4c2d6b89}
+
+
+Get the advance for a string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]A wchar\_\-t string \item[{\em len}]The length of the string. If $<$ 0 then all characters will be checked until a null character is encountered (optional). \item[{\em spacing}]A displacement vector to add after each character has been checked (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The string's advance width. \end{Desc}
+\index{FTFont@{FTFont}!Advance@{Advance}}
+\index{Advance@{Advance}!FTFont@{FTFont}}
+\subsubsection[{Advance}]{\setlength{\rightskip}{0pt plus 5cm}virtual float FTFont::Advance (const char $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em spacing} = {\tt {\bf FTPoint}()})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_e606eb0323341d1a521dae7a712f1b6e}
+
+
+Get the advance for a string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]'C' style string to be checked. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be checked until a null character is encountered (optional). \item[{\em spacing}]A displacement vector to add after each character has been checked (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The string's advance width. \end{Desc}
+\index{FTFont@{FTFont}!Ascender@{Ascender}}
+\index{Ascender@{Ascender}!FTFont@{FTFont}}
+\subsubsection[{Ascender}]{\setlength{\rightskip}{0pt plus 5cm}virtual float FTFont::Ascender () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_c4659028a0be30e8bc85814e7e53ee87}
+
+
+Get the global ascender height for the face. 
+
+\begin{Desc}
+\item[Returns:]Ascender height \end{Desc}
+\index{FTFont@{FTFont}!Attach@{Attach}}
+\index{Attach@{Attach}!FTFont@{FTFont}}
+\subsubsection[{Attach}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool FTFont::Attach (const unsigned char $\ast$ {\em pBufferBytes}, \/  size\_\-t {\em bufferSizeInBytes})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_95f86388d8cb2ba1c94679d30c68aba5}
+
+
+Attach auxilliary data to font e.g font metrics, from memory. 
+
+Note: not all font formats implement this function.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pBufferBytes}]the in-memory buffer. \item[{\em bufferSizeInBytes}]the length of the buffer in bytes. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]{\tt true} if file has been attached successfully. \end{Desc}
+\index{FTFont@{FTFont}!Attach@{Attach}}
+\index{Attach@{Attach}!FTFont@{FTFont}}
+\subsubsection[{Attach}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool FTFont::Attach (const char $\ast$ {\em fontFilePath})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_7ec6a20a092c338648626b98ec879e0c}
+
+
+Attach auxilliary file to font e.g font metrics. 
+
+Note: not all font formats implement this function.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fontFilePath}]auxilliary font file path. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]{\tt true} if file has been attached successfully. \end{Desc}
+\index{FTFont@{FTFont}!BBox@{BBox}}
+\index{BBox@{BBox}!FTFont@{FTFont}}
+\subsubsection[{BBox}]{\setlength{\rightskip}{0pt plus 5cm}void FTFont::BBox (const wchar\_\-t $\ast$ {\em string}, \/  float \& {\em llx}, \/  float \& {\em lly}, \/  float \& {\em llz}, \/  float \& {\em urx}, \/  float \& {\em ury}, \/  float \& {\em urz})\hspace{0.3cm}{\tt  [inline]}}\label{classFTFont_f495e078c9f8bad2b6fb0b5d04416fe7}
+
+
+Get the bounding box for a string (deprecated). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]A wchar\_\-t buffer. \item[{\em llx}]Lower left near x coordinate. \item[{\em lly}]Lower left near y coordinate. \item[{\em llz}]Lower left near z coordinate. \item[{\em urx}]Upper right far x coordinate. \item[{\em ury}]Upper right far y coordinate. \item[{\em urz}]Upper right far z coordinate. \end{description}
+\end{Desc}
+
+
+Definition at line 286 of file FTFont.h.
+
+References BBox(), FTBBox::Lower(), FTBBox::Upper(), FTPoint::Xf(), FTPoint::Yf(), and FTPoint::Zf().\index{FTFont@{FTFont}!BBox@{BBox}}
+\index{BBox@{BBox}!FTFont@{FTFont}}
+\subsubsection[{BBox}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTBBox} FTFont::BBox (const wchar\_\-t $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()}, \/  {\bf FTPoint} {\em spacing} = {\tt {\bf FTPoint}()})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_5ae3599880a9ee459be17f0a1d4ce67c}
+
+
+Get the bounding box for a string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]A wchar\_\-t buffer. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be checked until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \item[{\em spacing}]A displacement vector to add after each character has been checked (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The corresponding bounding box. \end{Desc}
+\index{FTFont@{FTFont}!BBox@{BBox}}
+\index{BBox@{BBox}!FTFont@{FTFont}}
+\subsubsection[{BBox}]{\setlength{\rightskip}{0pt plus 5cm}void FTFont::BBox (const char $\ast$ {\em string}, \/  float \& {\em llx}, \/  float \& {\em lly}, \/  float \& {\em llz}, \/  float \& {\em urx}, \/  float \& {\em ury}, \/  float \& {\em urz})\hspace{0.3cm}{\tt  [inline]}}\label{classFTFont_45078d6f0b74334030558d10cfeab4b9}
+
+
+Get the bounding box for a string (deprecated). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]A char buffer. \item[{\em llx}]Lower left near x coordinate. \item[{\em lly}]Lower left near y coordinate. \item[{\em llz}]Lower left near z coordinate. \item[{\em urx}]Upper right far x coordinate. \item[{\em ury}]Upper right far y coordinate. \item[{\em urz}]Upper right far z coordinate. \end{description}
+\end{Desc}
+
+
+Definition at line 251 of file FTFont.h.
+
+References BBox(), FTBBox::Lower(), FTBBox::Upper(), FTPoint::Xf(), FTPoint::Yf(), and FTPoint::Zf().\index{FTFont@{FTFont}!BBox@{BBox}}
+\index{BBox@{BBox}!FTFont@{FTFont}}
+\subsubsection[{BBox}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTBBox} FTFont::BBox (const char $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()}, \/  {\bf FTPoint} {\em spacing} = {\tt {\bf FTPoint}()})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_05b5c069ab8e958935096df78f8af16f}
+
+
+Get the bounding box for a string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]A char buffer. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be checked until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \item[{\em spacing}]A displacement vector to add after each character has been checked (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The corresponding bounding box. \end{Desc}
+
+
+Referenced by BBox().\index{FTFont@{FTFont}!CharMap@{CharMap}}
+\index{CharMap@{CharMap}!FTFont@{FTFont}}
+\subsubsection[{CharMap}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool FTFont::CharMap (FT\_\-Encoding {\em encoding})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_64f7346221e90325220829eeaa238e93}
+
+
+Set the character map for the face. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em encoding}]Freetype enumerate for char map code. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]{\tt true} if charmap was valid and set correctly. \end{Desc}
+\index{FTFont@{FTFont}!CharMapCount@{CharMapCount}}
+\index{CharMapCount@{CharMapCount}!FTFont@{FTFont}}
+\subsubsection[{CharMapCount}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int FTFont::CharMapCount () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_78cfce358a1b95d7b3792fcc3f99aa73}
+
+
+Get the number of character maps in this face. 
+
+\begin{Desc}
+\item[Returns:]character map count. \end{Desc}
+\index{FTFont@{FTFont}!CharMapList@{CharMapList}}
+\index{CharMapList@{CharMapList}!FTFont@{FTFont}}
+\subsubsection[{CharMapList}]{\setlength{\rightskip}{0pt plus 5cm}virtual FT\_\-Encoding$\ast$ FTFont::CharMapList ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_160ad04d573a6bcd0ecb709d7ded4fa3}
+
+
+Get a list of character maps in this face. 
+
+\begin{Desc}
+\item[Returns:]pointer to the first encoding. \end{Desc}
+\index{FTFont@{FTFont}!Depth@{Depth}}
+\index{Depth@{Depth}!FTFont@{FTFont}}
+\subsubsection[{Depth}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTFont::Depth (float {\em depth})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_7fc7825ca4089e12a679f788e0cb9d2c}
+
+
+Set the extrusion distance for the font. 
+
+Only implemented by \doxyref{FTExtrudeFont}{p.}{classFTExtrudeFont}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em depth}]The extrusion distance. \end{description}
+\end{Desc}
+\index{FTFont@{FTFont}!Descender@{Descender}}
+\index{Descender@{Descender}!FTFont@{FTFont}}
+\subsubsection[{Descender}]{\setlength{\rightskip}{0pt plus 5cm}virtual float FTFont::Descender () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_a72f172f4f9a39970913e176f38866bc}
+
+
+Gets the global descender height for the face. 
+
+\begin{Desc}
+\item[Returns:]Descender height \end{Desc}
+\index{FTFont@{FTFont}!Error@{Error}}
+\index{Error@{Error}!FTFont@{FTFont}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}virtual FT\_\-Error FTFont::Error () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_1b535e3a7fef84c073988ab6f74f9ec1}
+
+
+Queries the Font for errors. 
+
+\begin{Desc}
+\item[Returns:]The current error code. \end{Desc}
+\index{FTFont@{FTFont}!FaceSize@{FaceSize}}
+\index{FaceSize@{FaceSize}!FTFont@{FTFont}}
+\subsubsection[{FaceSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int FTFont::FaceSize () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_9cbb507fc57e6d50c5967d2ab3c50041}
+
+
+Get the current face size in points (1/72 inch). 
+
+\begin{Desc}
+\item[Returns:]face size \end{Desc}
+\index{FTFont@{FTFont}!FaceSize@{FaceSize}}
+\index{FaceSize@{FaceSize}!FTFont@{FTFont}}
+\subsubsection[{FaceSize}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool FTFont::FaceSize (const unsigned int {\em size}, \/  const unsigned int {\em res} = {\tt 72})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_ae95510a733d6755bbbaf92d67796ff9}
+
+
+Set the char size for the current face. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em size}]the face size in points (1/72 inch) \item[{\em res}]the resolution of the target device. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]{\tt true} if size was set correctly \end{Desc}
+\index{FTFont@{FTFont}!GlyphLoadFlags@{GlyphLoadFlags}}
+\index{GlyphLoadFlags@{GlyphLoadFlags}!FTFont@{FTFont}}
+\subsubsection[{GlyphLoadFlags}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTFont::GlyphLoadFlags (FT\_\-Int {\em flags})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_f29f89a8aa0f4e43a3a229ed1d3beacd}
+
+
+Set the glyph loading flags. 
+
+By default, fonts use the most sensible flags when loading a font's glyph using FT\_\-Load\_\-Glyph(). This function allows to override the default flags.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em flags}]The glyph loading flags. \end{description}
+\end{Desc}
+\index{FTFont@{FTFont}!LineHeight@{LineHeight}}
+\index{LineHeight@{LineHeight}!FTFont@{FTFont}}
+\subsubsection[{LineHeight}]{\setlength{\rightskip}{0pt plus 5cm}virtual float FTFont::LineHeight () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_c85ec080661ab10f124dbd0bb058556d}
+
+
+Gets the line spacing for the font. 
+
+\begin{Desc}
+\item[Returns:]Line height \end{Desc}
+\index{FTFont@{FTFont}!MakeGlyph@{MakeGlyph}}
+\index{MakeGlyph@{MakeGlyph}!FTFont@{FTFont}}
+\subsubsection[{MakeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTGlyph}$\ast$ FTFont::MakeGlyph (FT\_\-GlyphSlot {\em slot})\hspace{0.3cm}{\tt  [protected, pure virtual]}}\label{classFTFont_07f8bef6c3bd52e7d905e6db17c9b8e6}
+
+
+Construct a glyph of the correct type. 
+
+Clients must override the function and return their specialised \doxyref{FTGlyph}{p.}{classFTGlyph}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em slot}]A FreeType glyph slot. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FT$\ast$$\ast$$\ast$$\ast$Glyph or {\tt null} on failure. \end{Desc}
+
+
+Implemented in {\bf FTBufferFont} \doxyref{}{p.}{classFTBufferFont_8a70fe36e8a627f88cef4dc156fdd2d7}, {\bf FTBitmapFont} \doxyref{}{p.}{classFTBitmapFont_4596e73990af0b6e8ab16f94d0915b93}, {\bf FTExtrudeFont} \doxyref{}{p.}{classFTExtrudeFont_096fcfe612dc98f49dbc818ac47d2680}, {\bf FTOutlineFont} \doxyref{}{p.}{classFTOutlineFont_39df452446d15bd1d78ede61ae3f8c27}, {\bf FTPixmapFont} \doxyref{}{p.}{classFTPixmapFont_d0c48c6be9dca736f6f37032a8a25d84}, {\bf FTPolygonFont} \doxyref{}{p.}{classFTPolygonFont_3ce00692583b8cdddfffbe284c42ccf6}, and {\bf FTTextureFont} \doxyref{}{p.}{classFTTextureFont_3873876ac71776fcb9a3afe6e6e726e6}.\index{FTFont@{FTFont}!Outset@{Outset}}
+\index{Outset@{Outset}!FTFont@{FTFont}}
+\subsubsection[{Outset}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTFont::Outset (float {\em front}, \/  float {\em back})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_4a03161e954de3ae3c6f3f0872628a09}
+
+
+Set the front and back outset distances for the font. 
+
+Only implemented by \doxyref{FTExtrudeFont}{p.}{classFTExtrudeFont}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em front}]The front outset distance. \item[{\em back}]The back outset distance. \end{description}
+\end{Desc}
+\index{FTFont@{FTFont}!Outset@{Outset}}
+\index{Outset@{Outset}!FTFont@{FTFont}}
+\subsubsection[{Outset}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTFont::Outset (float {\em outset})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_ff29fad8b2a53f518311d06e2c25b227}
+
+
+Set the outset distance for the font. 
+
+Only implemented by \doxyref{FTOutlineFont}{p.}{classFTOutlineFont}, \doxyref{FTPolygonFont}{p.}{classFTPolygonFont} and \doxyref{FTExtrudeFont}{p.}{classFTExtrudeFont}
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em outset}]The outset distance. \end{description}
+\end{Desc}
+\index{FTFont@{FTFont}!Render@{Render}}
+\index{Render@{Render}!FTFont@{FTFont}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTPoint} FTFont::Render (const wchar\_\-t $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()}, \/  {\bf FTPoint} {\em spacing} = {\tt {\bf FTPoint}()}, \/  int {\em renderMode} = {\tt FTGL::RENDER\_\-ALL})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_0dc25b01d7ef4120910bc63d0a791251}
+
+
+Render a string of characters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]wchar\_\-t string to be output. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be displayed until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \item[{\em spacing}]A displacement vector to add after each character has been displayed (optional). \item[{\em renderMode}]Render mode to use for display (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The new pen position after the last character was output. \end{Desc}
+\index{FTFont@{FTFont}!Render@{Render}}
+\index{Render@{Render}!FTFont@{FTFont}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTPoint} FTFont::Render (const char $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()}, \/  {\bf FTPoint} {\em spacing} = {\tt {\bf FTPoint}()}, \/  int {\em renderMode} = {\tt FTGL::RENDER\_\-ALL})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_c6de580b27cc4df4986855967639de87}
+
+
+Render a string of characters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]'C' style string to be output. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be displayed until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \item[{\em spacing}]A displacement vector to add after each character has been displayed (optional). \item[{\em renderMode}]Render mode to use for display (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The new pen position after the last character was output. \end{Desc}
+\index{FTFont@{FTFont}!UseDisplayList@{UseDisplayList}}
+\index{UseDisplayList@{UseDisplayList}!FTFont@{FTFont}}
+\subsubsection[{UseDisplayList}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTFont::UseDisplayList (bool {\em useList})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTFont_5d3dfcf608bb1e07a7ceeec23f079600}
+
+
+Enable or disable the use of Display Lists inside \doxyref{FTGL}{p.}{namespaceFTGL}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em useList}]{\tt true} turns ON display lists. {\tt false} turns OFF display lists. \end{description}
+\end{Desc}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{FTFont@{FTFont}!FTBitmapFont@{FTBitmapFont}}
+\index{FTBitmapFont@{FTBitmapFont}!FTFont@{FTFont}}
+\subsubsection[{FTBitmapFont}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTBitmapFont}\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_7ba5a198d501799828a37b4b808b9352}
+
+
+
+
+Definition at line 78 of file FTFont.h.\index{FTFont@{FTFont}!FTBufferFont@{FTBufferFont}}
+\index{FTBufferFont@{FTBufferFont}!FTFont@{FTFont}}
+\subsubsection[{FTBufferFont}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTBufferFont}\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_b7dc21f40be33fee50c41b3ba3d49c73}
+
+
+
+
+Definition at line 79 of file FTFont.h.\index{FTFont@{FTFont}!FTExtrudeFont@{FTExtrudeFont}}
+\index{FTExtrudeFont@{FTExtrudeFont}!FTFont@{FTFont}}
+\subsubsection[{FTExtrudeFont}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTExtrudeFont}\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_06be1600e211ee41aa1b1ed9c7d25639}
+
+
+
+
+Definition at line 80 of file FTFont.h.\index{FTFont@{FTFont}!FTFontImpl@{FTFontImpl}}
+\index{FTFontImpl@{FTFontImpl}!FTFont@{FTFont}}
+\subsubsection[{FTFontImpl}]{\setlength{\rightskip}{0pt plus 5cm}friend class FTFontImpl\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_7ae54d130cb58f258d2b036a544c7a9b}
+
+
+
+
+Definition at line 367 of file FTFont.h.\index{FTFont@{FTFont}!FTOutlineFont@{FTOutlineFont}}
+\index{FTOutlineFont@{FTOutlineFont}!FTFont@{FTFont}}
+\subsubsection[{FTOutlineFont}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTOutlineFont}\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_17f6eed308c6d1116a7f1d86010f6c9e}
+
+
+
+
+Definition at line 81 of file FTFont.h.\index{FTFont@{FTFont}!FTPixmapFont@{FTPixmapFont}}
+\index{FTPixmapFont@{FTPixmapFont}!FTFont@{FTFont}}
+\subsubsection[{FTPixmapFont}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTPixmapFont}\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_c7f382db9ff9f02888b67b7434d7edd4}
+
+
+
+
+Definition at line 82 of file FTFont.h.\index{FTFont@{FTFont}!FTPolygonFont@{FTPolygonFont}}
+\index{FTPolygonFont@{FTPolygonFont}!FTFont@{FTFont}}
+\subsubsection[{FTPolygonFont}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTPolygonFont}\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_bd1c273c43e47346ad6c178ec173cc41}
+
+
+
+
+Definition at line 83 of file FTFont.h.\index{FTFont@{FTFont}!FTTextureFont@{FTTextureFont}}
+\index{FTTextureFont@{FTTextureFont}!FTFont@{FTFont}}
+\subsubsection[{FTTextureFont}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTTextureFont}\hspace{0.3cm}{\tt  [friend]}}\label{classFTFont_7870c341f7269dfae257e93406c17c92}
+
+
+
+
+Definition at line 84 of file FTFont.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTFont.h}\end{CompactItemize}

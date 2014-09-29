@@ -1,0 +1,30 @@
+\section{FTOutlineGlyph.h File Reference}
+\label{FTOutlineGlyph_8h}\index{FTOutlineGlyph.h@{FTOutlineGlyph.h}}
+{\tt \#include $<$FTGL/ftgl.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+class {\bf FTOutlineGlyph}
+\begin{CompactList}\small\item\em \doxyref{FTOutlineGlyph}{p.}{classFTOutlineGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating outlines. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTGLglyph} $\ast$ {\bf ftglCreateOutlineGlyph} (FT\_\-GlyphSlot glyph, float outset, int useDisplayList)
+\begin{CompactList}\small\item\em Create a specialisation of FTGLglyph for creating outlines. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{FTOutlineGlyph.h@{FTOutlineGlyph.h}!ftglCreateOutlineGlyph@{ftglCreateOutlineGlyph}}
+\index{ftglCreateOutlineGlyph@{ftglCreateOutlineGlyph}!FTOutlineGlyph.h@{FTOutlineGlyph.h}}
+\subsubsection[{ftglCreateOutlineGlyph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FTGLglyph}$\ast$ ftglCreateOutlineGlyph (FT\_\-GlyphSlot {\em glyph}, \/  float {\em outset}, \/  int {\em useDisplayList})}\label{FTOutlineGlyph_8h_c167788aa603067e0f10fd0c0dbf0b68}
+
+
+Create a specialisation of FTGLglyph for creating outlines. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em outset}]outset contour size \item[{\em useDisplayList}]Enable or disable the use of Display Lists for this glyph {\tt true} turns ON display lists. {\tt false} turns OFF display lists. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FTGLglyph$\ast$ object. \end{Desc}

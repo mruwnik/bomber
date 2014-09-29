@@ -1,0 +1,75 @@
+\section{FTOutlineGlyph Class Reference}
+\label{classFTOutlineGlyph}\index{FTOutlineGlyph@{FTOutlineGlyph}}
+\doxyref{FTOutlineGlyph}{p.}{classFTOutlineGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating outlines.  
+
+
+{\tt \#include $<$FTOutlineGlyph.h$>$}
+
+Inheritance diagram for FTOutlineGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTOutlineGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTOutlineGlyph} (FT\_\-GlyphSlot glyph, float outset, bool useDisplayList)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$FTOutlineGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)
+\begin{CompactList}\small\item\em Render this glyph at the current pen position. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTOutlineGlyph}{p.}{classFTOutlineGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating outlines. 
+
+Definition at line 42 of file FTOutlineGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTOutlineGlyph@{FTOutlineGlyph}!FTOutlineGlyph@{FTOutlineGlyph}}
+\index{FTOutlineGlyph@{FTOutlineGlyph}!FTOutlineGlyph@{FTOutlineGlyph}}
+\subsubsection[{FTOutlineGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTOutlineGlyph::FTOutlineGlyph (FT\_\-GlyphSlot {\em glyph}, \/  float {\em outset}, \/  bool {\em useDisplayList})}\label{classFTOutlineGlyph_4a45e11e8e1fca206ed808a433389c83}
+
+
+Constructor. 
+
+Sets the Error to Invalid\_\-Outline if the glyphs isn't an outline.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em outset}]outset distance \item[{\em useDisplayList}]Enable or disable the use of Display Lists for this glyph {\tt true} turns ON display lists. {\tt false} turns OFF display lists. \end{description}
+\end{Desc}
+\index{FTOutlineGlyph@{FTOutlineGlyph}!$\sim$FTOutlineGlyph@{$\sim$FTOutlineGlyph}}
+\index{$\sim$FTOutlineGlyph@{$\sim$FTOutlineGlyph}!FTOutlineGlyph@{FTOutlineGlyph}}
+\subsubsection[{$\sim$FTOutlineGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTOutlineGlyph::$\sim$FTOutlineGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTOutlineGlyph_acf6d78d4335864d96e07142e540e150}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTOutlineGlyph@{FTOutlineGlyph}!Render@{Render}}
+\index{Render@{Render}!FTOutlineGlyph@{FTOutlineGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTOutlineGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTOutlineGlyph_c0fcbe2023f8e8127144ad6a04627519}
+
+
+Render this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implements {\bf FTGlyph} \doxyref{}{p.}{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTOutlineGlyph.h}\end{CompactItemize}

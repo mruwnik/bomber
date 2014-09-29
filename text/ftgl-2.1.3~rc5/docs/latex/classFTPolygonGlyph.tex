@@ -1,0 +1,75 @@
+\section{FTPolygonGlyph Class Reference}
+\label{classFTPolygonGlyph}\index{FTPolygonGlyph@{FTPolygonGlyph}}
+\doxyref{FTPolygonGlyph}{p.}{classFTPolygonGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating tessellated polygon glyphs.  
+
+
+{\tt \#include $<$FTPolyGlyph.h$>$}
+
+Inheritance diagram for FTPolygonGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTPolygonGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTPolygonGlyph} (FT\_\-GlyphSlot glyph, float outset, bool useDisplayList)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$FTPolygonGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)
+\begin{CompactList}\small\item\em Render this glyph at the current pen position. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTPolygonGlyph}{p.}{classFTPolygonGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating tessellated polygon glyphs. 
+
+Definition at line 43 of file FTPolyGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTPolygonGlyph@{FTPolygonGlyph}!FTPolygonGlyph@{FTPolygonGlyph}}
+\index{FTPolygonGlyph@{FTPolygonGlyph}!FTPolygonGlyph@{FTPolygonGlyph}}
+\subsubsection[{FTPolygonGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTPolygonGlyph::FTPolygonGlyph (FT\_\-GlyphSlot {\em glyph}, \/  float {\em outset}, \/  bool {\em useDisplayList})}\label{classFTPolygonGlyph_b3edfc4a5c2a03a714989324389b42ba}
+
+
+Constructor. 
+
+Sets the Error to Invalid\_\-Outline if the glyphs isn't an outline.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em outset}]The outset distance \item[{\em useDisplayList}]Enable or disable the use of Display Lists for this glyph {\tt true} turns ON display lists. {\tt false} turns OFF display lists. \end{description}
+\end{Desc}
+\index{FTPolygonGlyph@{FTPolygonGlyph}!$\sim$FTPolygonGlyph@{$\sim$FTPolygonGlyph}}
+\index{$\sim$FTPolygonGlyph@{$\sim$FTPolygonGlyph}!FTPolygonGlyph@{FTPolygonGlyph}}
+\subsubsection[{$\sim$FTPolygonGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTPolygonGlyph::$\sim$FTPolygonGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTPolygonGlyph_b45178cf40ac634a73870d70cf09a80b}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTPolygonGlyph@{FTPolygonGlyph}!Render@{Render}}
+\index{Render@{Render}!FTPolygonGlyph@{FTPolygonGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTPolygonGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTPolygonGlyph_e790f0d5d4d85bafb7c63edf537255b7}
+
+
+Render this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implements {\bf FTGlyph} \doxyref{}{p.}{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTPolyGlyph.h}\end{CompactItemize}

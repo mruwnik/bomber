@@ -1,0 +1,30 @@
+\section{FTTextureGlyph.h File Reference}
+\label{FTTextureGlyph_8h}\index{FTTextureGlyph.h@{FTTextureGlyph.h}}
+{\tt \#include $<$FTGL/ftgl.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+class {\bf FTTextureGlyph}
+\begin{CompactList}\small\item\em \doxyref{FTTextureGlyph}{p.}{classFTTextureGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating texture glyphs. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTGLglyph} $\ast$ {\bf ftglCreateTextureGlyph} (FT\_\-GlyphSlot glyph, int id, int xOffset, int yOffset, int width, int height)
+\begin{CompactList}\small\item\em Create a specialisation of FTGLglyph for creating pixmaps. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Function Documentation}
+\index{FTTextureGlyph.h@{FTTextureGlyph.h}!ftglCreateTextureGlyph@{ftglCreateTextureGlyph}}
+\index{ftglCreateTextureGlyph@{ftglCreateTextureGlyph}!FTTextureGlyph.h@{FTTextureGlyph.h}}
+\subsubsection[{ftglCreateTextureGlyph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FTGLglyph}$\ast$ ftglCreateTextureGlyph (FT\_\-GlyphSlot {\em glyph}, \/  int {\em id}, \/  int {\em xOffset}, \/  int {\em yOffset}, \/  int {\em width}, \/  int {\em height})}\label{FTTextureGlyph_8h_b6445b416371daf7646155a435419fe9}
+
+
+Create a specialisation of FTGLglyph for creating pixmaps. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed. \item[{\em id}]The id of the texture that this glyph will be drawn in. \item[{\em xOffset}]The x offset into the parent texture to draw this glyph. \item[{\em yOffset}]The y offset into the parent texture to draw this glyph. \item[{\em width}]The width of the parent texture. \item[{\em height}]The height (number of rows) of the parent texture. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FTGLglyph$\ast$ object. \end{Desc}

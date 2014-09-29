@@ -1,0 +1,186 @@
+\section{FTGlyph Class Reference}
+\label{classFTGlyph}\index{FTGlyph@{FTGlyph}}
+\doxyref{FTGlyph}{p.}{classFTGlyph} is the base class for \doxyref{FTGL}{p.}{namespaceFTGL} glyphs.  
+
+
+{\tt \#include $<$FTGlyph.h$>$}
+
+Inheritance diagram for FTGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.40351cm]{classFTGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual {\bf $\sim$FTGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)=0
+\begin{CompactList}\small\item\em Renders this glyph at the current pen position. \item\end{CompactList}\item 
+virtual float {\bf Advance} () const 
+\begin{CompactList}\small\item\em Return the advance width for this glyph. \item\end{CompactList}\item 
+virtual const {\bf FTBBox} \& {\bf BBox} () const 
+\begin{CompactList}\small\item\em Return the bounding box for this glyph. \item\end{CompactList}\item 
+virtual FT\_\-Error {\bf Error} () const 
+\begin{CompactList}\small\item\em Queries for errors. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTGlyph} (FT\_\-GlyphSlot glyph)
+\begin{CompactList}\small\item\em Create a glyph. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class {\bf FTBitmapGlyph}
+\item 
+class {\bf FTBufferGlyph}
+\item 
+class {\bf FTExtrudeGlyph}
+\item 
+class {\bf FTOutlineGlyph}
+\item 
+class {\bf FTPixmapGlyph}
+\item 
+class {\bf FTPolygonGlyph}
+\item 
+class {\bf FTTextureGlyph}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTGlyph}{p.}{classFTGlyph} is the base class for \doxyref{FTGL}{p.}{namespaceFTGL} glyphs. 
+
+It provides the interface between Freetype glyphs and their openGL renderable counterparts. This is an abstract class and derived classes must implement the {\tt Render} function.
+
+\begin{Desc}
+\item[See also:]\doxyref{FTBBox}{p.}{classFTBBox} 
+
+\doxyref{FTPoint}{p.}{classFTPoint} \end{Desc}
+
+
+Definition at line 50 of file FTGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTGlyph@{FTGlyph}!FTGlyph@{FTGlyph}}
+\index{FTGlyph@{FTGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTGlyph::FTGlyph (FT\_\-GlyphSlot {\em glyph})\hspace{0.3cm}{\tt  [protected]}}\label{classFTGlyph_4673d2a5da6ab44bcc0f2eb3326c30e8}
+
+
+Create a glyph. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \end{description}
+\end{Desc}
+\index{FTGlyph@{FTGlyph}!$\sim$FTGlyph@{$\sim$FTGlyph}}
+\index{$\sim$FTGlyph@{$\sim$FTGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{$\sim$FTGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTGlyph::$\sim$FTGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTGlyph_d93a5124ddd9fe408e07f5054ab92452}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTGlyph@{FTGlyph}!Advance@{Advance}}
+\index{Advance@{Advance}!FTGlyph@{FTGlyph}}
+\subsubsection[{Advance}]{\setlength{\rightskip}{0pt plus 5cm}virtual float FTGlyph::Advance () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTGlyph_42fdc90fefe9d5550aca4339f88fbc5f}
+
+
+Return the advance width for this glyph. 
+
+\begin{Desc}
+\item[Returns:]advance width. \end{Desc}
+\index{FTGlyph@{FTGlyph}!BBox@{BBox}}
+\index{BBox@{BBox}!FTGlyph@{FTGlyph}}
+\subsubsection[{BBox}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTBBox}\& FTGlyph::BBox () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTGlyph_a165c4c7de25de0a989753f56a3bc252}
+
+
+Return the bounding box for this glyph. 
+
+\begin{Desc}
+\item[Returns:]bounding box. \end{Desc}
+\index{FTGlyph@{FTGlyph}!Error@{Error}}
+\index{Error@{Error}!FTGlyph@{FTGlyph}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}virtual FT\_\-Error FTGlyph::Error () const\hspace{0.3cm}{\tt  [virtual]}}\label{classFTGlyph_14fd6a0dc8b6e0e04a769e2e239b104b}
+
+
+Queries for errors. 
+
+\begin{Desc}
+\item[Returns:]The current error code. \end{Desc}
+\index{FTGlyph@{FTGlyph}!Render@{Render}}
+\index{Render@{Render}!FTGlyph@{FTGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [pure virtual]}}\label{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}
+
+
+Renders this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implemented in {\bf FTBitmapGlyph} \doxyref{}{p.}{classFTBitmapGlyph_7286040897f117da9f52023da795de42}, {\bf FTBufferGlyph} \doxyref{}{p.}{classFTBufferGlyph_33bc5176b9c5739f20d634eca04a45a5}, {\bf FTExtrudeGlyph} \doxyref{}{p.}{classFTExtrudeGlyph_48cc5da5e2e6491d79bcee8a9107bc60}, {\bf FTOutlineGlyph} \doxyref{}{p.}{classFTOutlineGlyph_c0fcbe2023f8e8127144ad6a04627519}, {\bf FTPixmapGlyph} \doxyref{}{p.}{classFTPixmapGlyph_c18ec8c2864d45d805e4fac5a980cddd}, {\bf FTPolygonGlyph} \doxyref{}{p.}{classFTPolygonGlyph_e790f0d5d4d85bafb7c63edf537255b7}, and {\bf FTTextureGlyph} \doxyref{}{p.}{classFTTextureGlyph_23d91684651a5cc913e6232c60dc58f4}.
+
+\subsection{Friends And Related Function Documentation}
+\index{FTGlyph@{FTGlyph}!FTBitmapGlyph@{FTBitmapGlyph}}
+\index{FTBitmapGlyph@{FTBitmapGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTBitmapGlyph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTBitmapGlyph}\hspace{0.3cm}{\tt  [friend]}}\label{classFTGlyph_a3f0c28a7cfbfa0e896973476f7ed49d}
+
+
+
+
+Definition at line 70 of file FTGlyph.h.\index{FTGlyph@{FTGlyph}!FTBufferGlyph@{FTBufferGlyph}}
+\index{FTBufferGlyph@{FTBufferGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTBufferGlyph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTBufferGlyph}\hspace{0.3cm}{\tt  [friend]}}\label{classFTGlyph_385e2288042fd77f037a715e7801b451}
+
+
+
+
+Definition at line 71 of file FTGlyph.h.\index{FTGlyph@{FTGlyph}!FTExtrudeGlyph@{FTExtrudeGlyph}}
+\index{FTExtrudeGlyph@{FTExtrudeGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTExtrudeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTExtrudeGlyph}\hspace{0.3cm}{\tt  [friend]}}\label{classFTGlyph_43bdcab05c1db93d9474fee8176c1fb0}
+
+
+
+
+Definition at line 72 of file FTGlyph.h.\index{FTGlyph@{FTGlyph}!FTOutlineGlyph@{FTOutlineGlyph}}
+\index{FTOutlineGlyph@{FTOutlineGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTOutlineGlyph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTOutlineGlyph}\hspace{0.3cm}{\tt  [friend]}}\label{classFTGlyph_ccb6ff0274a52a67e706edda49d6a201}
+
+
+
+
+Definition at line 73 of file FTGlyph.h.\index{FTGlyph@{FTGlyph}!FTPixmapGlyph@{FTPixmapGlyph}}
+\index{FTPixmapGlyph@{FTPixmapGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTPixmapGlyph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTPixmapGlyph}\hspace{0.3cm}{\tt  [friend]}}\label{classFTGlyph_b141fccf761e39b9e4bec64cda0507a7}
+
+
+
+
+Definition at line 74 of file FTGlyph.h.\index{FTGlyph@{FTGlyph}!FTPolygonGlyph@{FTPolygonGlyph}}
+\index{FTPolygonGlyph@{FTPolygonGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTPolygonGlyph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTPolygonGlyph}\hspace{0.3cm}{\tt  [friend]}}\label{classFTGlyph_0e33f7bc34e1097f8f9adcb6252d1bc0}
+
+
+
+
+Definition at line 75 of file FTGlyph.h.\index{FTGlyph@{FTGlyph}!FTTextureGlyph@{FTTextureGlyph}}
+\index{FTTextureGlyph@{FTTextureGlyph}!FTGlyph@{FTGlyph}}
+\subsubsection[{FTTextureGlyph}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf FTTextureGlyph}\hspace{0.3cm}{\tt  [friend]}}\label{classFTGlyph_01c2ee1e01ccd33e4f1f26f2478a74a0}
+
+
+
+
+Definition at line 76 of file FTGlyph.h.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTGlyph.h}\end{CompactItemize}

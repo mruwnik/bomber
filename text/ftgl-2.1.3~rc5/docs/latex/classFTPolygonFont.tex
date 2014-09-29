@@ -1,0 +1,100 @@
+\section{FTPolygonFont Class Reference}
+\label{classFTPolygonFont}\index{FTPolygonFont@{FTPolygonFont}}
+\doxyref{FTPolygonFont}{p.}{classFTPolygonFont} is a specialisation of the \doxyref{FTFont}{p.}{classFTFont} class for handling tesselated Polygon Mesh fonts.  
+
+
+{\tt \#include $<$FTGLPolygonFont.h$>$}
+
+Inheritance diagram for FTPolygonFont::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTPolygonFont}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTPolygonFont} (const char $\ast$fontFilePath)
+\begin{CompactList}\small\item\em Open and read a font file. \item\end{CompactList}\item 
+{\bf FTPolygonFont} (const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)
+\begin{CompactList}\small\item\em Open and read a font from a buffer in memory. \item\end{CompactList}\item 
+{\bf $\sim$FTPolygonFont} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual {\bf FTGlyph} $\ast$ {\bf MakeGlyph} (FT\_\-GlyphSlot slot)
+\begin{CompactList}\small\item\em Construct a glyph of the correct type. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTPolygonFont}{p.}{classFTPolygonFont} is a specialisation of the \doxyref{FTFont}{p.}{classFTFont} class for handling tesselated Polygon Mesh fonts. 
+
+\begin{Desc}
+\item[See also:]\doxyref{FTFont}{p.}{classFTFont} \end{Desc}
+
+
+Definition at line 45 of file FTGLPolygonFont.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTPolygonFont@{FTPolygonFont}!FTPolygonFont@{FTPolygonFont}}
+\index{FTPolygonFont@{FTPolygonFont}!FTPolygonFont@{FTPolygonFont}}
+\subsubsection[{FTPolygonFont}]{\setlength{\rightskip}{0pt plus 5cm}FTPolygonFont::FTPolygonFont (const char $\ast$ {\em fontFilePath})}\label{classFTPolygonFont_69d65f22dcbe492b44cc0c7340d94d53}
+
+
+Open and read a font file. 
+
+Sets Error flag.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fontFilePath}]font file path. \end{description}
+\end{Desc}
+\index{FTPolygonFont@{FTPolygonFont}!FTPolygonFont@{FTPolygonFont}}
+\index{FTPolygonFont@{FTPolygonFont}!FTPolygonFont@{FTPolygonFont}}
+\subsubsection[{FTPolygonFont}]{\setlength{\rightskip}{0pt plus 5cm}FTPolygonFont::FTPolygonFont (const unsigned char $\ast$ {\em pBufferBytes}, \/  size\_\-t {\em bufferSizeInBytes})}\label{classFTPolygonFont_462ed082228153dceec87ec1453e85b2}
+
+
+Open and read a font from a buffer in memory. 
+
+Sets Error flag. The buffer is owned by the client and is NOT copied by \doxyref{FTGL}{p.}{namespaceFTGL}. The pointer must be valid while using \doxyref{FTGL}{p.}{namespaceFTGL}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pBufferBytes}]the in-memory buffer \item[{\em bufferSizeInBytes}]the length of the buffer in bytes \end{description}
+\end{Desc}
+\index{FTPolygonFont@{FTPolygonFont}!$\sim$FTPolygonFont@{$\sim$FTPolygonFont}}
+\index{$\sim$FTPolygonFont@{$\sim$FTPolygonFont}!FTPolygonFont@{FTPolygonFont}}
+\subsubsection[{$\sim$FTPolygonFont}]{\setlength{\rightskip}{0pt plus 5cm}FTPolygonFont::$\sim$FTPolygonFont ()}\label{classFTPolygonFont_d71644a0d27c8f1791b9823cc7153cab}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTPolygonFont@{FTPolygonFont}!MakeGlyph@{MakeGlyph}}
+\index{MakeGlyph@{MakeGlyph}!FTPolygonFont@{FTPolygonFont}}
+\subsubsection[{MakeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTGlyph}$\ast$ FTPolygonFont::MakeGlyph (FT\_\-GlyphSlot {\em slot})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classFTPolygonFont_3ce00692583b8cdddfffbe284c42ccf6}
+
+
+Construct a glyph of the correct type. 
+
+Clients must override the function and return their specialised \doxyref{FTGlyph}{p.}{classFTGlyph}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em slot}]A FreeType glyph slot. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FT$\ast$$\ast$$\ast$$\ast$Glyph or {\tt null} on failure. \end{Desc}
+
+
+Implements {\bf FTFont} \doxyref{}{p.}{classFTFont_07f8bef6c3bd52e7d905e6db17c9b8e6}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTGLPolygonFont.h}\end{CompactItemize}

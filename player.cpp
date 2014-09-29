@@ -1,103 +1,169 @@
 #include "player.h"
 
-//works, but could do with improvement
-
-knefle::knefle(int a, int b, int c, int d, int e): up(a), right(b), down(c), left(d), bomb(e){}
-
-knefle::knefle(){
-	up = right = down = left = bomb = 0;
-}
-
-knefle& knefle::operator=(const knefle& kn){
-	up = kn.up;
-	right = kn.right;
-	down = kn.down;
-	left = kn.left;
-	bomb = kn.bomb;
-}
-
 /* playerpos to pozycja gracza + metoda ktora postawia bombe */
-playerpos::playerpos(int x, int y): pos(x,y){}
+playerpos::playerpos(int x, int y,int n): pos(x,y), nr(n){}
+
+void playerpos::printpos(){ std::cout << "players position:[" << pos::x << "," << pos::y << "]\n";}
+
+void playerpos::getpos(int* t){
+	t[0] = x;
+	t[1] = y;
+}		
+
+void playerpos::setpos(int x2, int y2){
+	pos::x = x2;
+	pos::y = y2;
+}
 
 playerpos::~playerpos(){}
 
-void playerpos::remove(){ board->playerDown();}
+void playerpos::remove(){ board->playerDown(nr);}
 
 bomba* playerpos::spawnbomb(object* o, int range){//postawia bombe w danym kierunku
 	if(o == board->check(x,y)){
 		bomba* b = new bomba(x,y,range);
-		new twin(b,o,x,y); // klasa twin pozwala postawic 2 objekty na jednym polu planszy
+		if(!b){
+			std::cerr << "Error! bad memory allocation\n";
+			exit(1);
+		}
+		twin* tw = new twin(b,o,x,y); // klasa twin pozwala postawic 2 objekty na jednym polu planszy
+		if(!tw){
+			std::cerr << "Error! bad memory allocation\n";
+			exit(1);
+		}
 		return b;
 	}
 	return 0;
 }
 
-player::player(int x, int y, knefle k,int t): object('@',COLOR_PAIR(2),t), face(none), p(x,y), k(k), list(), range(4), bombs(3), speed(t){
+player::player(int x, int y, keys k, int n, int t): object(NULL,t), face(none), p(x,y,n), k(k), list(), range(4), bombs(3), speed(t), x(0.1), y(0.1), playerNo(n), w(n,fire::getTex(),30){
+	r=0.5;
 	p.getid(this);
-	x=y=0;
 }
 
 void player::die(){//funkcja ktora odrazu zabija gracza (ogien ja uzywa by sie nie przejmowac sprawdzaniem warunkow)
 	p.move(kill);
 }
 
+void player::print(){
+//	glEnable(GL_BLEND);
+//	glDisable(GL_COLOR_MATERIAL);
+//	GLfloat mat[] = {0.29225,0.29225,0.29225,0.6};
+//	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, mat);
+//	mat[0] = 0.50754;
+//	mat[1] = 0.50754;
+//	mat[2] = 0.50754;
+//	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, mat);
+//	mat[0] = 0.508273;
+//	mat[1] = 0.508273;
+//	mat[2] = 0.508273;
+//	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat);
+//	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 51.2);  
+
+//	glBlendFunc(GL_SRC_ALPHA,GL_DST_ALPHA);
+
+	switch(playerNo){
+		case 0 : glColor4f(0.0,0.0,1.0,0.7); break;
+		case 1 : glColor4f(0.0,1.0,0.0,0.7); break;
+		case 2 : glColor4f(1.0,0.0,0.0,0.7); break;
+		case 3 : glColor4f(0.4,0.5,0.2,0.7); break;
+	}
+	glTranslatef(x,y,r);
+	glutSolidSphere(r,40,40);
+	w.print();
+	glColor3f(1.0,1.0,1.0);
+//	glDisable(GL_BLEND);
+//	glEnable(GL_COLOR_MATERIAL);
+	
+//	p.printpos();
+	//std::cout << "player printing[" << x << "," << y << "]\n";
+}
+
 int player::move(){// obsluguje klawiature by sprawdzic co gracz chce zrobic
 	bomba* b=0;
 	int i=0;
 	action a=none;
+	action check=none;
 
 	if(!object::counter--){
 		object::counter=speed;
-/*	switch(getchar()){
-		case 'w': a=p.move(up); face=down; break;
-		case 'd': a=p.move(right); face=left; break;
-		case 's': a=p.move(down); face=up; break;
-		case 'a': a=p.move(left); face=right; break;
-		case 'q': if(bombs && (b=p.spawnbomb(this,range))){
-				  bombs--;
-				  b->setid(list.add(b));
-			  }
-			  break;
-	}*/
-/**/		if(keyboard_keypressed(k.bomb) && bombs && (b=p.spawnbomb(this,range))){
-			bombs--;
-			b->setid(list.add(b)); // dodaje bombe do swojej listy bomb
-/**/			mvprintw(40,90,"d");
-			return none;
-		 }
 	}
-		//else{
-	/**/	mvprintw(40+x,90+y," ");
-/**/			if(keyboard_keypressed(k.up)){
-				if ( (--y) <= -speed ){ 
-					a=p.move(up);
-					y = speed;
-				}
+	if(keys::keyPressed(k.bomb) && !(object::counter%4) &&  bombs && (b=p.spawnbomb(this,range))){
+		bombs--;
+		b->setid(list.add(b)); // dodaje bombe do swojej listy bomb
+		return none;
+	}
+	
+	if(keys::keyPressed(k.up)){
+		if ( x > (r - 0.5)){ 
+			x -= 1.0/speed;
+		}else if ( x >= (r - 0.5 - 1.0/speed) ){
+			if((check=p.check(up)) == up){
+				x -= 1.0/speed;
+			}else if (check == kill){
+				return kill;
 			}
-/**/			else if(keyboard_keypressed(k.right)){
-				if ( (++x) >= speed ){
-					a=p.move(right);
-					x = -speed;
-				}
+		}else{
+			if ( (x-=1.0/speed) <= -0.5 ){ 
+				a=p.move(up);
+				x = 0.5;
 			}
-/**/			else if(keyboard_keypressed(k.down)){
-				if ( (++y) >= speed ){ 
-					a=p.move(down);
-					y = -speed;
-				}
-/**/			}
-			else if(keyboard_keypressed(k.left)){
-				if ( (--x) <= -speed ){
-					a=p.move(left);
-					x = speed;
-				}
+		}
+	}
+       	if(keys::keyPressed(k.right)){
+		if ( y < ( 0.5 - r )){ 
+			y += 1.0/speed;
+		}else if ( y <= ( 0.5 - r + 1.0/speed) ){
+			if((check=p.check(right)) == right){
+				y += 1.0/speed;
+			}else if (check == kill){
+				return kill;
 			}
-	/**/	mvprintw(40+x,90+y,"*");
+		}else{
+			if ( (y+=1.0/speed) >= 0.5 ){ 
+				a=p.move(right);
+				y = -0.5;
+			}
+		}
+	}
 
-		if(a==kill)
-			return kill;
+	if(keys::keyPressed(k.down)){
+		if ( x < ( 0.5 - r)){ 
+			x += 1.0/speed;
+		}else if ( x <= ( 0.5 - r + 1.0/speed) ){
+			if((check=p.check(down)) == down){
+				x += 1.0/speed;
+			}else if (check == kill){
+				return kill;
+			}
+		}else{
+			if ( (x+=1.0/speed) >= 0.5 ){ 
+				a=p.move(down);
+				x = -0.5;
+			}
+		}
+	}
+	if(keys::keyPressed(k.left)){
+		if ( y > (r - 0.5)){ 
+			y -= 1.0/speed;
+		}else if ( y >= (r - 0.5 - 1.0/speed) ){
+			if((check=p.check(left)) == left){
+				y -= 1.0/speed;
+			}else if (check == kill){
+				return kill;
+			}
+		}else{
+			if ( (y-=1.0/speed) <= -0.5 ){ 
+				a=p.move(left);
+				y = 0.5;
+			}
+		}
+	}
 
-	//}
+	if(a==kill)
+		return kill;
+
+
 //przelatuje cala liste bomb i sprawdza czy powinne juz wybuchnac, jezeli tak to ja wysadza
 	while(b =list[i++]){
 		if(!b->count()){ 
@@ -107,8 +173,7 @@ int player::move(){// obsluguje klawiature by sprawdzic co gracz chce zrobic
 		}
 		b->move();
 	}
-	if(a)
-/**/	mvprintw(40,90,"%d",a);
+
 	return (int)a;
 }
 
@@ -124,7 +189,7 @@ action player::request(object* o){// obsluguje zapytania o usuniecia sie z drogi
 	return none;
 }
 
-void player::setkeys(const knefle& kn){
+void player::setkeys(const keys& kn){
 	k = kn;
 }
 
@@ -146,9 +211,23 @@ void player::setid(int i){
 	p.setid(i);
 }
 
+void player::getpos(int* t){ return p.getpos(t);}
+
+void player::setpos(int x2, int y2){ p.setpos(x2,y2);}
+
+void player::clearBombs(){
+	int i=0;
+	while(bomba* o =list[i++]){ //jezeli jeszcze ma jakies bomby na planszie to trzebe je dolozyc do listy aktywnych objektow
+		o->defuse();
+		o->die();
+	}
+	list.clear();
+}
+
 player::~player(){
 	int i=0;
-	while(bomba* o =list[i++]) //jezeli jeszcze ma jakies bomby na planszie to trzebe je dolozyc do listy aktywnych objektow
+	p.setid(-1);
+	while(bomba* o = list.remove(0)) //jezeli jeszcze ma jakies bomby na planszie to trzebe je dolozyc do listy aktywnych objektow
 		o->getid();
 	p.remove();
 }

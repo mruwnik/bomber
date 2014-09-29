@@ -1,0 +1,121 @@
+\section{FTGlyph.h File Reference}
+\label{FTGlyph_8h}\index{FTGlyph.h@{FTGlyph.h}}
+{\tt \#include $<$FTGL/ftgl.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+class {\bf FTGlyph}
+\begin{CompactList}\small\item\em \doxyref{FTGlyph}{p.}{classFTGlyph} is the base class for \doxyref{FTGL}{p.}{namespaceFTGL} glyphs. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef struct \_\-FTGLglyph {\bf FTGLglyph}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTGLglyph} $\ast$ {\bf ftglCreateCustomGlyph} ({\bf FTGLglyph} $\ast$base, void $\ast$data, void($\ast$renderCallback)({\bf FTGLglyph} $\ast$, void $\ast$, {\bf FTGL\_\-DOUBLE}, {\bf FTGL\_\-DOUBLE}, int, {\bf FTGL\_\-DOUBLE} $\ast$, {\bf FTGL\_\-DOUBLE} $\ast$), void($\ast$destroyCallback)({\bf FTGLglyph} $\ast$, void $\ast$))
+\begin{CompactList}\small\item\em Create a custom \doxyref{FTGL}{p.}{namespaceFTGL} glyph object. \item\end{CompactList}\item 
+void {\bf ftglDestroyGlyph} ({\bf FTGLglyph} $\ast$glyph)
+\begin{CompactList}\small\item\em Destroy an \doxyref{FTGL}{p.}{namespaceFTGL} glyph object. \item\end{CompactList}\item 
+void {\bf ftglRenderGlyph} ({\bf FTGLglyph} $\ast$glyph, {\bf FTGL\_\-DOUBLE} penx, {\bf FTGL\_\-DOUBLE} peny, int renderMode, {\bf FTGL\_\-DOUBLE} $\ast$advancex, {\bf FTGL\_\-DOUBLE} $\ast$advancey)
+\begin{CompactList}\small\item\em Render a glyph at the current pen position and compute the corresponding advance. \item\end{CompactList}\item 
+float {\bf ftglGetGlyphAdvance} ({\bf FTGLglyph} $\ast$glyph)
+\begin{CompactList}\small\item\em Return the advance for a glyph. \item\end{CompactList}\item 
+void {\bf ftglGetGlyphBBox} ({\bf FTGLglyph} $\ast$glyph, float bounds[6])
+\begin{CompactList}\small\item\em Return the bounding box for a glyph. \item\end{CompactList}\item 
+FT\_\-Error {\bf ftglGetGlyphError} ({\bf FTGLglyph} $\ast$glyph)
+\begin{CompactList}\small\item\em Query a glyph for errors. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{FTGlyph.h@{FTGlyph.h}!FTGLglyph@{FTGLglyph}}
+\index{FTGLglyph@{FTGLglyph}!FTGlyph.h@{FTGlyph.h}}
+\subsubsection[{FTGLglyph}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \_\-FTGLglyph {\bf FTGLglyph}}\label{FTGlyph_8h_155b37e19e0844502e473bb32c31a558}
+
+
+
+
+Definition at line 133 of file FTGlyph.h.
+
+\subsection{Function Documentation}
+\index{FTGlyph.h@{FTGlyph.h}!ftglCreateCustomGlyph@{ftglCreateCustomGlyph}}
+\index{ftglCreateCustomGlyph@{ftglCreateCustomGlyph}!FTGlyph.h@{FTGlyph.h}}
+\subsubsection[{ftglCreateCustomGlyph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FTGLglyph}$\ast$ ftglCreateCustomGlyph ({\bf FTGLglyph} $\ast$ {\em base}, \/  void $\ast$ {\em data}, \/  void($\ast$)({\bf FTGLglyph} $\ast$, void $\ast$, {\bf FTGL\_\-DOUBLE}, {\bf FTGL\_\-DOUBLE}, int, {\bf FTGL\_\-DOUBLE} $\ast$, {\bf FTGL\_\-DOUBLE} $\ast$) {\em renderCallback}, \/  void($\ast$)({\bf FTGLglyph} $\ast$, void $\ast$) {\em destroyCallback})}\label{FTGlyph_8h_3bb5a45829e31dc34e053998e671c829}
+
+
+Create a custom \doxyref{FTGL}{p.}{namespaceFTGL} glyph object. 
+
+FIXME: maybe get rid of \char`\"{}base\char`\"{} and have advanceCallback etc. functions
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em base}]The base FTGLglyph$\ast$ to subclass. \item[{\em data}]A pointer to private data that will be passed to callbacks. \item[{\em renderCallback}]A rendering callback function. \item[{\em destroyCallback}]A callback function to be called upon destruction. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FTGLglyph$\ast$ object. \end{Desc}
+\index{FTGlyph.h@{FTGlyph.h}!ftglDestroyGlyph@{ftglDestroyGlyph}}
+\index{ftglDestroyGlyph@{ftglDestroyGlyph}!FTGlyph.h@{FTGlyph.h}}
+\subsubsection[{ftglDestroyGlyph}]{\setlength{\rightskip}{0pt plus 5cm}void ftglDestroyGlyph ({\bf FTGLglyph} $\ast$ {\em glyph})}\label{FTGlyph_8h_c877f6b37bdd0d711b5a64aefcb14edb}
+
+
+Destroy an \doxyref{FTGL}{p.}{namespaceFTGL} glyph object. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]An FTGLglyph$\ast$ object. \end{description}
+\end{Desc}
+\index{FTGlyph.h@{FTGlyph.h}!ftglGetGlyphAdvance@{ftglGetGlyphAdvance}}
+\index{ftglGetGlyphAdvance@{ftglGetGlyphAdvance}!FTGlyph.h@{FTGlyph.h}}
+\subsubsection[{ftglGetGlyphAdvance}]{\setlength{\rightskip}{0pt plus 5cm}float ftglGetGlyphAdvance ({\bf FTGLglyph} $\ast$ {\em glyph})}\label{FTGlyph_8h_245d2f30cd138488d9a9078c56926acc}
+
+
+Return the advance for a glyph. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]An FTGLglyph$\ast$ object. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance's X component. \end{Desc}
+\index{FTGlyph.h@{FTGlyph.h}!ftglGetGlyphBBox@{ftglGetGlyphBBox}}
+\index{ftglGetGlyphBBox@{ftglGetGlyphBBox}!FTGlyph.h@{FTGlyph.h}}
+\subsubsection[{ftglGetGlyphBBox}]{\setlength{\rightskip}{0pt plus 5cm}void ftglGetGlyphBBox ({\bf FTGLglyph} $\ast$ {\em glyph}, \/  float {\em bounds}[6])}\label{FTGlyph_8h_0808eac7b90dc8cf99a34b5d4efffec8}
+
+
+Return the bounding box for a glyph. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]An FTGLglyph$\ast$ object. \item[{\em bounds}]An array of 6 float values where the bounding box's lower left near and upper right far 3D coordinates will be stored. \end{description}
+\end{Desc}
+\index{FTGlyph.h@{FTGlyph.h}!ftglGetGlyphError@{ftglGetGlyphError}}
+\index{ftglGetGlyphError@{ftglGetGlyphError}!FTGlyph.h@{FTGlyph.h}}
+\subsubsection[{ftglGetGlyphError}]{\setlength{\rightskip}{0pt plus 5cm}FT\_\-Error ftglGetGlyphError ({\bf FTGLglyph} $\ast$ {\em glyph})}\label{FTGlyph_8h_37333224310648a159a8f507d1bb10d7}
+
+
+Query a glyph for errors. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]An FTGLglyph$\ast$ object. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The current error code. \end{Desc}
+\index{FTGlyph.h@{FTGlyph.h}!ftglRenderGlyph@{ftglRenderGlyph}}
+\index{ftglRenderGlyph@{ftglRenderGlyph}!FTGlyph.h@{FTGlyph.h}}
+\subsubsection[{ftglRenderGlyph}]{\setlength{\rightskip}{0pt plus 5cm}void ftglRenderGlyph ({\bf FTGLglyph} $\ast$ {\em glyph}, \/  {\bf FTGL\_\-DOUBLE} {\em penx}, \/  {\bf FTGL\_\-DOUBLE} {\em peny}, \/  int {\em renderMode}, \/  {\bf FTGL\_\-DOUBLE} $\ast$ {\em advancex}, \/  {\bf FTGL\_\-DOUBLE} $\ast$ {\em advancey})}\label{FTGlyph_8h_12f6eaf22f7d3e0e11831315c5945d8c}
+
+
+Render a glyph at the current pen position and compute the corresponding advance. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]An FTGLglyph$\ast$ object. \item[{\em penx}]The current pen's X position. \item[{\em peny}]The current pen's Y position. \item[{\em renderMode}]Render mode to display \item[{\em advancex}]A pointer to an FTGL\_\-DOUBLE where to write the advance's X component. \item[{\em advancey}]A pointer to an FTGL\_\-DOUBLE where to write the advance's Y component. \end{description}
+\end{Desc}

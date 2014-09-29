@@ -1,0 +1,45 @@
+\section{FTPolyGlyph.h File Reference}
+\label{FTPolyGlyph_8h}\index{FTPolyGlyph.h@{FTPolyGlyph.h}}
+{\tt \#include $<$FTGL/ftgl.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+class {\bf FTPolygonGlyph}
+\begin{CompactList}\small\item\em \doxyref{FTPolygonGlyph}{p.}{classFTPolygonGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating tessellated polygon glyphs. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf FTPolyGlyph}~{\bf FTPolygonGlyph}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTGLglyph} $\ast$ {\bf ftglCreatePolygonGlyph} (FT\_\-GlyphSlot glyph, float outset, int useDisplayList)
+\begin{CompactList}\small\item\em Create a specialisation of FTGLglyph for creating tessellated polygon glyphs. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{FTPolyGlyph.h@{FTPolyGlyph.h}!FTPolyGlyph@{FTPolyGlyph}}
+\index{FTPolyGlyph@{FTPolyGlyph}!FTPolyGlyph.h@{FTPolyGlyph.h}}
+\subsubsection[{FTPolyGlyph}]{\setlength{\rightskip}{0pt plus 5cm}\#define FTPolyGlyph~{\bf FTPolygonGlyph}}\label{FTPolyGlyph_8h_3b398eed9d3a77c75ae581c07e8c28ef}
+
+
+
+
+Definition at line 74 of file FTPolyGlyph.h.
+
+\subsection{Function Documentation}
+\index{FTPolyGlyph.h@{FTPolyGlyph.h}!ftglCreatePolygonGlyph@{ftglCreatePolygonGlyph}}
+\index{ftglCreatePolygonGlyph@{ftglCreatePolygonGlyph}!FTPolyGlyph.h@{FTPolyGlyph.h}}
+\subsubsection[{ftglCreatePolygonGlyph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FTGLglyph}$\ast$ ftglCreatePolygonGlyph (FT\_\-GlyphSlot {\em glyph}, \/  float {\em outset}, \/  int {\em useDisplayList})}\label{FTPolyGlyph_8h_6e84a92b01c5cf7b08a82c8186db9627}
+
+
+Create a specialisation of FTGLglyph for creating tessellated polygon glyphs. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em outset}]outset contour size \item[{\em useDisplayList}]Enable or disable the use of Display Lists for this glyph {\tt true} turns ON display lists. {\tt false} turns OFF display lists. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FTGLglyph$\ast$ object. \end{Desc}

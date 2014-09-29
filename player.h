@@ -4,26 +4,20 @@
 #include "list.h"
 #include "twin.h"
 #include "baddy.h"
-#include <vgakeyboard.h>
 #include <typeinfo>
 
-/* prosta klasa ktora przechowuje kody klawiszowe poszczegolnych przyciskow sterujacych */
-struct knefle{
-	knefle(int,int,int,int,int);
-	knefle();
-	knefle& operator=(const knefle&);
-	int up;
-	int right;
-	int down;
-	int left;
-	int bomb;
-};
+#include "keys.h"
 
 /* pozycja gracza - takze pozwala postwic bomby i przy smierci gracza powiadomia planszy, ze jest 1 gracza mniej */
 struct playerpos : public pos{
-	playerpos(int x, int y);
+	int nr;				// nr gracza
+public:
+	playerpos(int x, int y, int nr);
 	bomba* spawnbomb(object*,int);	// postawia bombe pod graczem
 	void remove();			// powiadomia plansze o smierci gracza
+/*!!*/	void printpos();
+	void getpos(int*);
+	void setpos(int x,int y);
 	~playerpos();
 };
 
@@ -36,10 +30,15 @@ class player : public object{
 	playerpos p;
 	List<bomba> list;// tablica bomb - jak postawi sie bombe to zostaje on przechowany w owej tablicy
 	int range,bombs,speed;	// zasieg bomby, ilosc bomb oraz predkosc gracza
-	knefle k;		// kody klawiszowe poszczegolnych przyciskow uzywane do sterowania graczem
-	signed int x,y;
+	keys k;		// kody klawiszowe poszczegolnych przyciskow uzywane do sterowania graczem
+	float x;
+	float y;
+	float r;
+	wierdo w;
 public:
-	player(int x, int y, knefle k, int t=6);
+	int playerNo;
+	player(int x, int y, keys k, int n,int t=6);
+	void print();
 	void addbomb();		// bonusowa bomba
 	void incrange();	// bonus dajacy +1 do zasiegu
 	void stim();		// bonus przyspieszajacy gracza
@@ -47,7 +46,10 @@ public:
 	int move();		// obsluguje ruchy gracza
 	void setid(int);
 	void getid();
-	void setkeys(const knefle&); // za pomoca tej funkcji mozna zmienic klawisze sterujace
+	void setkeys(const keys&); // za pomoca tej funkcji mozna zmienic klawisze sterujace
+	void getpos(int*);
+	void setpos(int x,int y);
+	void clearBombs();
 	action request(object*);// do pytania sie o usuniecia sie z drogi	
 	~player();
 };

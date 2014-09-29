@@ -1,6 +1,6 @@
 #include "object.h"
 
-
+#ifdef NCURSES
 object::object(char c, unsigned long int m, int t): symbol(c), counter(t), mask(m){}
 
 void object::changeSymbol(char c){// funkcja w sumie nie potrzebna, ale przydatna dla obecnej obslugi grafiki
@@ -15,6 +15,56 @@ void object::changeMask(unsigned long int m, int i){
 		case And : mask = mask & m; break;
 	}
 }
+#else
+object::object(Texture* c, int t, int texlen): counter(t){
+	if(c){
+		symbol[0] = &(c[0]);
+		symbol[1] = &(c[1]);
+	}else{
+		symbol[0] = NULL;
+		symbol[1] = NULL;
+	}
+}
+
+object::object(int t,Texture** c, int texlen): counter(t){
+	if(c){
+		//if(!symbol)
+		//	symbol = new Texture*[2];
+		symbol[0] = c[0];
+		symbol[1] = c[1];
+	}else{
+		symbol[0] = NULL;
+		symbol[1] = NULL;
+	}
+//	symbol = new Texture*[texlen];
+//	symbol[0] = &c[0];
+//	symbol[1] = &c[1];
+}
+
+void object::changeSymbol(Texture* c, int){
+	if(c){
+		symbol[0] = &(c[0]);
+		symbol[1] = &(c[1]);
+	}else{
+		symbol[0] = NULL;
+		symbol[1] = NULL;
+	}
+}
+
+void object::changeSymbol(Texture** c){// funkcja w sumie nie potrzebna, ale przydatna dla obecnej obslugi grafiki
+	if(c){
+//		if(!symbol)
+//			symbol = new Texture*[2];
+		symbol[0] = c[0];
+		symbol[1] = c[1];
+	}else{
+		symbol[0] = NULL;
+		symbol[1] = NULL;
+	}
+	//delete[] symbol;
+	//symbol = c;
+}
+#endif
 
 /* funkcja ta jest wywolana dla wszystkich objektow znajdujacych sie na liscie objektow aktywnych. sluzy ona by przemiescac 
  * zyjatka albo wysadzic bomby itp. */
@@ -35,7 +85,61 @@ void object::die(){}		// nie umiera
 /* funkcja dla grafiki. mozna tu cokolwiek innego dac. chodzi o to, ze funkcja print() w klasie board wywoluje ta funkcje dla
  * kazdego objektu na planszie wiec tutaj nalezy odpowiednie kroki podjac aby wyswietlic obecny stan tego obiektu */
 void object::print(){		
+#ifdef NCURSES
 /**/	addch(symbol | mask);/**/
 }
 
 object::~object(){}
+#else 
+	if((symbol!=NULL)){
+		glColor4f(0.0,0.0,0.0,1);
+		glEnable(GL_TEXTURE_2D);
+		if(symbol[0]){
+			glBindTexture(GL_TEXTURE_2D, symbol[0]->texID);
+			glBegin (GL_QUADS);
+				glNormal3f(0.0,1.0,0.0);
+				glTexCoord2f (0.0, 1.0);glVertex3f (-0.5, -0.5, 0);
+				glTexCoord2f (1.0, 1.0);glVertex3f (0.5, -0.5, 0.0);
+				glTexCoord2f (1.0, 0.0);glVertex3f (0.5, -0.5, 1.0);
+				glTexCoord2f (0.0, 0.0);glVertex3f (-0.5, -0.5, 1.0);
+
+				glNormal3f(1.0,0.0,0.0);
+				glTexCoord2f (0.0, 1.0);glVertex3f (0.5, -0.5, 0);
+				glTexCoord2f (1.0, 1.0);glVertex3f (0.5, 0.5, 0.0);
+				glTexCoord2f (1.0, 0.0);glVertex3f (0.5, 0.5, 1.0);
+				glTexCoord2f (0.0, 0.0);glVertex3f (0.5, -0.5, 1.0);
+
+				glNormal3f(0.0,1.0,0.0);
+				glTexCoord2f (0.0, 1.0);glVertex3f (0.5, 0.5, 0);
+				glTexCoord2f (1.0, 1.0);glVertex3f (-0.5, 0.5, 0.0);
+				glTexCoord2f (1.0, 0.0);glVertex3f (-0.5, 0.5, 1.0);
+				glTexCoord2f (0.0, 0.0);glVertex3f (0.5, 0.5, 1.0);
+
+				glNormal3f(1.0,0.0,0.0);
+				glTexCoord2f (0.0, 1.0);glVertex3f (-0.5, 0.5, 0);
+				glTexCoord2f (1.0, 1.0);glVertex3f (-0.5, -0.5, 0.0);
+				glTexCoord2f (1.0, 0.0);glVertex3f (-0.5, -0.5, 1.0);
+				glTexCoord2f (0.0, 0.0);glVertex3f (-0.5, 0.5, 1.0);
+			glEnd ();
+		}
+		if(symbol[1]){
+			glBindTexture(GL_TEXTURE_2D, symbol[1]->texID);
+			glBegin(GL_QUADS);
+				glNormal3f(0.0,0.0,1.0);
+				glTexCoord2f (0.0, 0.0);glVertex3f (-0.5, -0.5, 1.0);
+				glTexCoord2f (1.0, 0.0);glVertex3f (-0.5, 0.5, 1.0);
+				glTexCoord2f (1.0, 1.0);glVertex3f (0.5, 0.5, 1.0);
+				glTexCoord2f (0.0, 1.0);glVertex3f (0.5, -0.5, 1.0);
+			glEnd();
+		}
+		glDisable(GL_TEXTURE_2D);
+	}
+}
+
+object::~object(){
+	symbol[0]=NULL;
+	symbol[1]=NULL;
+//	delete[] symbol;
+//	symbol = NULL;
+}
+#endif

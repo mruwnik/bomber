@@ -1,0 +1,73 @@
+\section{FTBitmapGlyph Class Reference}
+\label{classFTBitmapGlyph}\index{FTBitmapGlyph@{FTBitmapGlyph}}
+\doxyref{FTBitmapGlyph}{p.}{classFTBitmapGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating bitmaps.  
+
+
+{\tt \#include $<$FTBitmapGlyph.h$>$}
+
+Inheritance diagram for FTBitmapGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTBitmapGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTBitmapGlyph} (FT\_\-GlyphSlot glyph)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$FTBitmapGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)
+\begin{CompactList}\small\item\em Render this glyph at the current pen position. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTBitmapGlyph}{p.}{classFTBitmapGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating bitmaps. 
+
+Definition at line 42 of file FTBitmapGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTBitmapGlyph@{FTBitmapGlyph}!FTBitmapGlyph@{FTBitmapGlyph}}
+\index{FTBitmapGlyph@{FTBitmapGlyph}!FTBitmapGlyph@{FTBitmapGlyph}}
+\subsubsection[{FTBitmapGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTBitmapGlyph::FTBitmapGlyph (FT\_\-GlyphSlot {\em glyph})}\label{classFTBitmapGlyph_de810e7077f5f5dd79ef9b2f62a6db56}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \end{description}
+\end{Desc}
+\index{FTBitmapGlyph@{FTBitmapGlyph}!$\sim$FTBitmapGlyph@{$\sim$FTBitmapGlyph}}
+\index{$\sim$FTBitmapGlyph@{$\sim$FTBitmapGlyph}!FTBitmapGlyph@{FTBitmapGlyph}}
+\subsubsection[{$\sim$FTBitmapGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTBitmapGlyph::$\sim$FTBitmapGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTBitmapGlyph_c5aa31a17033c4a04277a09159466b82}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTBitmapGlyph@{FTBitmapGlyph}!Render@{Render}}
+\index{Render@{Render}!FTBitmapGlyph@{FTBitmapGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTBitmapGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTBitmapGlyph_7286040897f117da9f52023da795de42}
+
+
+Render this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implements {\bf FTGlyph} \doxyref{}{p.}{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTBitmapGlyph.h}\end{CompactItemize}

@@ -1,0 +1,100 @@
+\section{FTOutlineFont Class Reference}
+\label{classFTOutlineFont}\index{FTOutlineFont@{FTOutlineFont}}
+\doxyref{FTOutlineFont}{p.}{classFTOutlineFont} is a specialisation of the \doxyref{FTFont}{p.}{classFTFont} class for handling Vector Outline fonts.  
+
+
+{\tt \#include $<$FTGLOutlineFont.h$>$}
+
+Inheritance diagram for FTOutlineFont::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTOutlineFont}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTOutlineFont} (const char $\ast$fontFilePath)
+\begin{CompactList}\small\item\em Open and read a font file. \item\end{CompactList}\item 
+{\bf FTOutlineFont} (const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)
+\begin{CompactList}\small\item\em Open and read a font from a buffer in memory. \item\end{CompactList}\item 
+{\bf $\sim$FTOutlineFont} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual {\bf FTGlyph} $\ast$ {\bf MakeGlyph} (FT\_\-GlyphSlot slot)
+\begin{CompactList}\small\item\em Construct a glyph of the correct type. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTOutlineFont}{p.}{classFTOutlineFont} is a specialisation of the \doxyref{FTFont}{p.}{classFTFont} class for handling Vector Outline fonts. 
+
+\begin{Desc}
+\item[See also:]\doxyref{FTFont}{p.}{classFTFont} \end{Desc}
+
+
+Definition at line 45 of file FTGLOutlineFont.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTOutlineFont@{FTOutlineFont}!FTOutlineFont@{FTOutlineFont}}
+\index{FTOutlineFont@{FTOutlineFont}!FTOutlineFont@{FTOutlineFont}}
+\subsubsection[{FTOutlineFont}]{\setlength{\rightskip}{0pt plus 5cm}FTOutlineFont::FTOutlineFont (const char $\ast$ {\em fontFilePath})}\label{classFTOutlineFont_248f6a8fa1244c7bff53f1c799c8163f}
+
+
+Open and read a font file. 
+
+Sets Error flag.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fontFilePath}]font file path. \end{description}
+\end{Desc}
+\index{FTOutlineFont@{FTOutlineFont}!FTOutlineFont@{FTOutlineFont}}
+\index{FTOutlineFont@{FTOutlineFont}!FTOutlineFont@{FTOutlineFont}}
+\subsubsection[{FTOutlineFont}]{\setlength{\rightskip}{0pt plus 5cm}FTOutlineFont::FTOutlineFont (const unsigned char $\ast$ {\em pBufferBytes}, \/  size\_\-t {\em bufferSizeInBytes})}\label{classFTOutlineFont_6618bdb1b3a672d4d6750627cf1dac0c}
+
+
+Open and read a font from a buffer in memory. 
+
+Sets Error flag. The buffer is owned by the client and is NOT copied by \doxyref{FTGL}{p.}{namespaceFTGL}. The pointer must be valid while using \doxyref{FTGL}{p.}{namespaceFTGL}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pBufferBytes}]the in-memory buffer \item[{\em bufferSizeInBytes}]the length of the buffer in bytes \end{description}
+\end{Desc}
+\index{FTOutlineFont@{FTOutlineFont}!$\sim$FTOutlineFont@{$\sim$FTOutlineFont}}
+\index{$\sim$FTOutlineFont@{$\sim$FTOutlineFont}!FTOutlineFont@{FTOutlineFont}}
+\subsubsection[{$\sim$FTOutlineFont}]{\setlength{\rightskip}{0pt plus 5cm}FTOutlineFont::$\sim$FTOutlineFont ()}\label{classFTOutlineFont_2ac40cf9e9013fc2e82b98a55e0fa28e}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTOutlineFont@{FTOutlineFont}!MakeGlyph@{MakeGlyph}}
+\index{MakeGlyph@{MakeGlyph}!FTOutlineFont@{FTOutlineFont}}
+\subsubsection[{MakeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTGlyph}$\ast$ FTOutlineFont::MakeGlyph (FT\_\-GlyphSlot {\em slot})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classFTOutlineFont_39df452446d15bd1d78ede61ae3f8c27}
+
+
+Construct a glyph of the correct type. 
+
+Clients must override the function and return their specialised \doxyref{FTGlyph}{p.}{classFTGlyph}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em slot}]A FreeType glyph slot. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FT$\ast$$\ast$$\ast$$\ast$Glyph or {\tt null} on failure. \end{Desc}
+
+
+Implements {\bf FTFont} \doxyref{}{p.}{classFTFont_07f8bef6c3bd52e7d905e6db17c9b8e6}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTGLOutlineFont.h}\end{CompactItemize}

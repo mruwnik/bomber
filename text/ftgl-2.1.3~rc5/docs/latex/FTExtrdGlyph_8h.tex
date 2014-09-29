@@ -1,0 +1,45 @@
+\section{FTExtrdGlyph.h File Reference}
+\label{FTExtrdGlyph_8h}\index{FTExtrdGlyph.h@{FTExtrdGlyph.h}}
+{\tt \#include $<$FTGL/ftgl.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+class {\bf FTExtrudeGlyph}
+\begin{CompactList}\small\item\em \doxyref{FTExtrudeGlyph}{p.}{classFTExtrudeGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating tessellated extruded polygon glyphs. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define {\bf FTExtrdGlyph}~{\bf FTExtrudeGlyph}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTGLglyph} $\ast$ {\bf ftglCreateExtrudeGlyph} (FT\_\-GlyphSlot glyph, float depth, float frontOutset, float backOutset, int useDisplayList)
+\begin{CompactList}\small\item\em Create a specialisation of FTGLglyph for creating tessellated extruded polygon glyphs. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Define Documentation}
+\index{FTExtrdGlyph.h@{FTExtrdGlyph.h}!FTExtrdGlyph@{FTExtrdGlyph}}
+\index{FTExtrdGlyph@{FTExtrdGlyph}!FTExtrdGlyph.h@{FTExtrdGlyph.h}}
+\subsubsection[{FTExtrdGlyph}]{\setlength{\rightskip}{0pt plus 5cm}\#define FTExtrdGlyph~{\bf FTExtrudeGlyph}}\label{FTExtrdGlyph_8h_8ef94254dc520e02f8013247b660081e}
+
+
+
+
+Definition at line 77 of file FTExtrdGlyph.h.
+
+\subsection{Function Documentation}
+\index{FTExtrdGlyph.h@{FTExtrdGlyph.h}!ftglCreateExtrudeGlyph@{ftglCreateExtrudeGlyph}}
+\index{ftglCreateExtrudeGlyph@{ftglCreateExtrudeGlyph}!FTExtrdGlyph.h@{FTExtrdGlyph.h}}
+\subsubsection[{ftglCreateExtrudeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FTGLglyph}$\ast$ ftglCreateExtrudeGlyph (FT\_\-GlyphSlot {\em glyph}, \/  float {\em depth}, \/  float {\em frontOutset}, \/  float {\em backOutset}, \/  int {\em useDisplayList})}\label{FTExtrdGlyph_8h_325fc3b9c3a867c2d947e4c97caee92e}
+
+
+Create a specialisation of FTGLglyph for creating tessellated extruded polygon glyphs. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em depth}]The distance along the z axis to extrude the glyph \item[{\em frontOutset}]outset contour size \item[{\em backOutset}]outset contour size \item[{\em useDisplayList}]Enable or disable the use of Display Lists for this glyph {\tt true} turns ON display lists. {\tt false} turns OFF display lists. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FTGLglyph$\ast$ object. \end{Desc}

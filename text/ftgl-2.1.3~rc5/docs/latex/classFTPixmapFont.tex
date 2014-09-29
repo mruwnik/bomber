@@ -1,0 +1,100 @@
+\section{FTPixmapFont Class Reference}
+\label{classFTPixmapFont}\index{FTPixmapFont@{FTPixmapFont}}
+\doxyref{FTPixmapFont}{p.}{classFTPixmapFont} is a specialisation of the \doxyref{FTFont}{p.}{classFTFont} class for handling Pixmap (Grey Scale) fonts.  
+
+
+{\tt \#include $<$FTGLPixmapFont.h$>$}
+
+Inheritance diagram for FTPixmapFont::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTPixmapFont}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTPixmapFont} (const char $\ast$fontFilePath)
+\begin{CompactList}\small\item\em Open and read a font file. \item\end{CompactList}\item 
+{\bf FTPixmapFont} (const unsigned char $\ast$pBufferBytes, size\_\-t bufferSizeInBytes)
+\begin{CompactList}\small\item\em Open and read a font from a buffer in memory. \item\end{CompactList}\item 
+{\bf $\sim$FTPixmapFont} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual {\bf FTGlyph} $\ast$ {\bf MakeGlyph} (FT\_\-GlyphSlot slot)
+\begin{CompactList}\small\item\em Construct a glyph of the correct type. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTPixmapFont}{p.}{classFTPixmapFont} is a specialisation of the \doxyref{FTFont}{p.}{classFTFont} class for handling Pixmap (Grey Scale) fonts. 
+
+\begin{Desc}
+\item[See also:]\doxyref{FTFont}{p.}{classFTFont} \end{Desc}
+
+
+Definition at line 45 of file FTGLPixmapFont.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTPixmapFont@{FTPixmapFont}!FTPixmapFont@{FTPixmapFont}}
+\index{FTPixmapFont@{FTPixmapFont}!FTPixmapFont@{FTPixmapFont}}
+\subsubsection[{FTPixmapFont}]{\setlength{\rightskip}{0pt plus 5cm}FTPixmapFont::FTPixmapFont (const char $\ast$ {\em fontFilePath})}\label{classFTPixmapFont_7059546858ab96667edbd017b3eb282f}
+
+
+Open and read a font file. 
+
+Sets Error flag.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fontFilePath}]font file path. \end{description}
+\end{Desc}
+\index{FTPixmapFont@{FTPixmapFont}!FTPixmapFont@{FTPixmapFont}}
+\index{FTPixmapFont@{FTPixmapFont}!FTPixmapFont@{FTPixmapFont}}
+\subsubsection[{FTPixmapFont}]{\setlength{\rightskip}{0pt plus 5cm}FTPixmapFont::FTPixmapFont (const unsigned char $\ast$ {\em pBufferBytes}, \/  size\_\-t {\em bufferSizeInBytes})}\label{classFTPixmapFont_b901b6cd034c8a888e732a568d68cb5b}
+
+
+Open and read a font from a buffer in memory. 
+
+Sets Error flag. The buffer is owned by the client and is NOT copied by \doxyref{FTGL}{p.}{namespaceFTGL}. The pointer must be valid while using \doxyref{FTGL}{p.}{namespaceFTGL}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pBufferBytes}]the in-memory buffer \item[{\em bufferSizeInBytes}]the length of the buffer in bytes \end{description}
+\end{Desc}
+\index{FTPixmapFont@{FTPixmapFont}!$\sim$FTPixmapFont@{$\sim$FTPixmapFont}}
+\index{$\sim$FTPixmapFont@{$\sim$FTPixmapFont}!FTPixmapFont@{FTPixmapFont}}
+\subsubsection[{$\sim$FTPixmapFont}]{\setlength{\rightskip}{0pt plus 5cm}FTPixmapFont::$\sim$FTPixmapFont ()}\label{classFTPixmapFont_fb29aeafcdbb9366c548ed9d0e80d88c}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTPixmapFont@{FTPixmapFont}!MakeGlyph@{MakeGlyph}}
+\index{MakeGlyph@{MakeGlyph}!FTPixmapFont@{FTPixmapFont}}
+\subsubsection[{MakeGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTGlyph}$\ast$ FTPixmapFont::MakeGlyph (FT\_\-GlyphSlot {\em slot})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classFTPixmapFont_d0c48c6be9dca736f6f37032a8a25d84}
+
+
+Construct a glyph of the correct type. 
+
+Clients must override the function and return their specialised \doxyref{FTGlyph}{p.}{classFTGlyph}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em slot}]A FreeType glyph slot. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]An FT$\ast$$\ast$$\ast$$\ast$Glyph or {\tt null} on failure. \end{Desc}
+
+
+Implements {\bf FTFont} \doxyref{}{p.}{classFTFont_07f8bef6c3bd52e7d905e6db17c9b8e6}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTGLPixmapFont.h}\end{CompactItemize}

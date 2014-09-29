@@ -1,0 +1,73 @@
+\section{FTTextureGlyph Class Reference}
+\label{classFTTextureGlyph}\index{FTTextureGlyph@{FTTextureGlyph}}
+\doxyref{FTTextureGlyph}{p.}{classFTTextureGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating texture glyphs.  
+
+
+{\tt \#include $<$FTTextureGlyph.h$>$}
+
+Inheritance diagram for FTTextureGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTTextureGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTTextureGlyph} (FT\_\-GlyphSlot glyph, int id, int xOffset, int yOffset, int width, int height)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$FTTextureGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)
+\begin{CompactList}\small\item\em Render this glyph at the current pen position. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTTextureGlyph}{p.}{classFTTextureGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating texture glyphs. 
+
+Definition at line 43 of file FTTextureGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTTextureGlyph@{FTTextureGlyph}!FTTextureGlyph@{FTTextureGlyph}}
+\index{FTTextureGlyph@{FTTextureGlyph}!FTTextureGlyph@{FTTextureGlyph}}
+\subsubsection[{FTTextureGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTTextureGlyph::FTTextureGlyph (FT\_\-GlyphSlot {\em glyph}, \/  int {\em id}, \/  int {\em xOffset}, \/  int {\em yOffset}, \/  int {\em width}, \/  int {\em height})}\label{classFTTextureGlyph_4e09ffe9a4cca361ea8052411c114b69}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em id}]The id of the texture that this glyph will be drawn in \item[{\em xOffset}]The x offset into the parent texture to draw this glyph \item[{\em yOffset}]The y offset into the parent texture to draw this glyph \item[{\em width}]The width of the parent texture \item[{\em height}]The height (number of rows) of the parent texture \end{description}
+\end{Desc}
+\index{FTTextureGlyph@{FTTextureGlyph}!$\sim$FTTextureGlyph@{$\sim$FTTextureGlyph}}
+\index{$\sim$FTTextureGlyph@{$\sim$FTTextureGlyph}!FTTextureGlyph@{FTTextureGlyph}}
+\subsubsection[{$\sim$FTTextureGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTTextureGlyph::$\sim$FTTextureGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTTextureGlyph_b0467ed99fc200ba43f2b0fb30f99eb9}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTTextureGlyph@{FTTextureGlyph}!Render@{Render}}
+\index{Render@{Render}!FTTextureGlyph@{FTTextureGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTTextureGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTTextureGlyph_23d91684651a5cc913e6232c60dc58f4}
+
+
+Render this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implements {\bf FTGlyph} \doxyref{}{p.}{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTTextureGlyph.h}\end{CompactItemize}

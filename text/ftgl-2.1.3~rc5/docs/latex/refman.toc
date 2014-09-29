@@ -1,0 +1,459 @@
+\contentsline {chapter}{\numberline {1}FTGL User Guide}{1}
+\contentsline {section}{\numberline {1.1}Introduction}{1}
+\contentsline {section}{\numberline {1.2}Documentation}{1}
+\contentsline {section}{\numberline {1.3}Additional information}{2}
+\contentsline {chapter}{\numberline {2}Frequently Asked Questions}{3}
+\contentsline {section}{\numberline {2.1}FAQ}{4}
+\contentsline {subsection}{\numberline {2.1.1}When I try to compile \%FTGL it complains about a missing file from the include: \#include $<$ft2build.h$>$}{4}
+\contentsline {subsection}{\numberline {2.1.2}Is it possible to map a font to a \char `\"{}unit\char `\"{} size? My application relies on the fonts being a certain \char `\"{}physical\char `\"{} height (in OpenGL coordinate space) rather than a point size in display space. Any thoughts/suggestions?}{4}
+\contentsline {chapter}{\numberline {3}Projects using FTGL}{5}
+\contentsline {section}{\numberline {3.1}\%FTGL language bindings}{6}
+\contentsline {subsection}{\numberline {3.1.1}\%FTGL\#}{6}
+\contentsline {subsection}{\numberline {3.1.2}GlGuiA}{6}
+\contentsline {subsection}{\numberline {3.1.3}Ruby \%FTGL}{6}
+\contentsline {subsection}{\numberline {3.1.4}PyFTGL}{6}
+\contentsline {section}{\numberline {3.2}Projects currently using \%FTGL}{6}
+\contentsline {subsection}{\numberline {3.2.1}Agent World}{6}
+\contentsline {subsection}{\numberline {3.2.2}Amaltheia}{6}
+\contentsline {subsection}{\numberline {3.2.3}Armagetron Advanced}{7}
+\contentsline {subsection}{\numberline {3.2.4}Audicle}{7}
+\contentsline {subsection}{\numberline {3.2.5}Battlestar T.U.X.}{7}
+\contentsline {subsection}{\numberline {3.2.6}BJS}{7}
+\contentsline {subsection}{\numberline {3.2.7}Blender}{7}
+\contentsline {subsection}{\numberline {3.2.8}Breve}{7}
+\contentsline {subsection}{\numberline {3.2.9}BZFlag}{7}
+\contentsline {subsection}{\numberline {3.2.10}Capture The Flag}{8}
+\contentsline {subsection}{\numberline {3.2.11}Cello}{8}
+\contentsline {subsection}{\numberline {3.2.12}Chimera}{8}
+\contentsline {subsection}{\numberline {3.2.13}Cinepaint}{8}
+\contentsline {subsection}{\numberline {3.2.14}Duel}{8}
+\contentsline {subsection}{\numberline {3.2.15}Empty Clip}{8}
+\contentsline {subsection}{\numberline {3.2.16}Freebox}{8}
+\contentsline {subsection}{\numberline {3.2.17}Gem}{8}
+\contentsline {subsection}{\numberline {3.2.18}GLMayan}{9}
+\contentsline {subsection}{\numberline {3.2.19}Glover}{9}
+\contentsline {subsection}{\numberline {3.2.20}Ivf++}{9}
+\contentsline {subsection}{\numberline {3.2.21}Jahshaka}{9}
+\contentsline {subsection}{\numberline {3.2.22}Karaoke FX}{9}
+\contentsline {subsection}{\numberline {3.2.23}Libinstrudeo}{9}
+\contentsline {subsection}{\numberline {3.2.24}Light Speed!}{9}
+\contentsline {subsection}{\numberline {3.2.25}MySQL GUI Tools}{9}
+\contentsline {subsection}{\numberline {3.2.26}OctPlot}{10}
+\contentsline {subsection}{\numberline {3.2.27}Open ActiveWrl}{10}
+\contentsline {subsection}{\numberline {3.2.28}OpenEaagles}{10}
+\contentsline {subsection}{\numberline {3.2.29}OpenGC}{10}
+\contentsline {subsection}{\numberline {3.2.30}OpenSG}{10}
+\contentsline {subsection}{\numberline {3.2.31}Panthera}{10}
+\contentsline {subsection}{\numberline {3.2.32}Planet Penguin Racer}{10}
+\contentsline {subsection}{\numberline {3.2.33}projectM}{10}
+\contentsline {subsection}{\numberline {3.2.34}Puzzle Bobble 3D}{11}
+\contentsline {subsection}{\numberline {3.2.35}ROOT}{11}
+\contentsline {subsection}{\numberline {3.2.36}SCIRun}{11}
+\contentsline {subsection}{\numberline {3.2.37}TINE}{11}
+\contentsline {subsection}{\numberline {3.2.38}Tiny Planet}{11}
+\contentsline {subsection}{\numberline {3.2.39}Truevision}{11}
+\contentsline {subsection}{\numberline {3.2.40}Tulip}{11}
+\contentsline {subsection}{\numberline {3.2.41}Ubit}{11}
+\contentsline {subsection}{\numberline {3.2.42}VRS}{12}
+\contentsline {subsection}{\numberline {3.2.43}VTK}{12}
+\contentsline {subsection}{\numberline {3.2.44}XLock}{12}
+\contentsline {section}{\numberline {3.3}Projects that used to use \%FTGL}{12}
+\contentsline {subsection}{\numberline {3.3.1}GNU Backgammon}{12}
+\contentsline {subsection}{\numberline {3.3.2}OpenSceneGraph}{12}
+\contentsline {subsection}{\numberline {3.3.3}Teddy}{12}
+\contentsline {subsection}{\numberline {3.3.4}VigiPac}{12}
+\contentsline {chapter}{\numberline {4}FTGL tutorial}{13}
+\contentsline {section}{\numberline {4.1}Starting to use \%FTGL}{14}
+\contentsline {section}{\numberline {4.2}Choosing a font type}{14}
+\contentsline {subsection}{\numberline {4.2.1}Raster fonts}{14}
+\contentsline {subsection}{\numberline {4.2.2}Vector fonts}{14}
+\contentsline {subsection}{\numberline {4.2.3}Textured fonts}{15}
+\contentsline {section}{\numberline {4.3}Create font objects}{15}
+\contentsline {subsection}{\numberline {4.3.1}in C}{15}
+\contentsline {subsection}{\numberline {4.3.2}in C++}{15}
+\contentsline {section}{\numberline {4.4}More font commands}{16}
+\contentsline {subsection}{\numberline {4.4.1}Font metrics}{16}
+\contentsline {subsection}{\numberline {4.4.2}Specifying a character map encoding}{16}
+\contentsline {section}{\numberline {4.5}Sample font manager class}{17}
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{19}
+\contentsline {section}{\numberline {5.1}FTGL Namespace Reference}{19}
+\contentsline {subsection}{\numberline {5.1.1}Enumeration Type Documentation}{19}
+\contentsline {subsubsection}{\numberline {5.1.1.1}RenderMode}{19}
+\contentsline {subsubsection}{\numberline {5.1.1.2}TextAlignment}{19}
+\contentsline {chapter}{\numberline {6}Data Structure Documentation}{21}
+\contentsline {section}{\numberline {6.1}FTBBox Class Reference}{21}
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{22}
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{22}
+\contentsline {subsubsection}{\numberline {6.1.2.1}FTBBox}{22}
+\contentsline {subsubsection}{\numberline {6.1.2.2}FTBBox}{22}
+\contentsline {subsubsection}{\numberline {6.1.2.3}FTBBox}{22}
+\contentsline {subsubsection}{\numberline {6.1.2.4}FTBBox}{22}
+\contentsline {subsubsection}{\numberline {6.1.2.5}$\sim $FTBBox}{22}
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{23}
+\contentsline {subsubsection}{\numberline {6.1.3.1}Invalidate}{23}
+\contentsline {subsubsection}{\numberline {6.1.3.2}IsValid}{23}
+\contentsline {subsubsection}{\numberline {6.1.3.3}Lower}{23}
+\contentsline {subsubsection}{\numberline {6.1.3.4}operator+=}{23}
+\contentsline {subsubsection}{\numberline {6.1.3.5}operator$|$=}{23}
+\contentsline {subsubsection}{\numberline {6.1.3.6}SetDepth}{23}
+\contentsline {subsubsection}{\numberline {6.1.3.7}Upper}{24}
+\contentsline {section}{\numberline {6.2}FTBitmapFont Class Reference}{25}
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{25}
+\contentsline {subsection}{\numberline {6.2.2}Constructor \& Destructor Documentation}{25}
+\contentsline {subsubsection}{\numberline {6.2.2.1}FTBitmapFont}{25}
+\contentsline {subsubsection}{\numberline {6.2.2.2}FTBitmapFont}{26}
+\contentsline {subsubsection}{\numberline {6.2.2.3}$\sim $FTBitmapFont}{26}
+\contentsline {subsection}{\numberline {6.2.3}Member Function Documentation}{26}
+\contentsline {subsubsection}{\numberline {6.2.3.1}MakeGlyph}{26}
+\contentsline {section}{\numberline {6.3}FTBitmapGlyph Class Reference}{27}
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{27}
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{27}
+\contentsline {subsubsection}{\numberline {6.3.2.1}FTBitmapGlyph}{27}
+\contentsline {subsubsection}{\numberline {6.3.2.2}$\sim $FTBitmapGlyph}{27}
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{28}
+\contentsline {subsubsection}{\numberline {6.3.3.1}Render}{28}
+\contentsline {section}{\numberline {6.4}FTBuffer Class Reference}{29}
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{29}
+\contentsline {subsection}{\numberline {6.4.2}Constructor \& Destructor Documentation}{29}
+\contentsline {subsubsection}{\numberline {6.4.2.1}FTBuffer}{29}
+\contentsline {subsubsection}{\numberline {6.4.2.2}$\sim $FTBuffer}{30}
+\contentsline {subsection}{\numberline {6.4.3}Member Function Documentation}{30}
+\contentsline {subsubsection}{\numberline {6.4.3.1}Height}{30}
+\contentsline {subsubsection}{\numberline {6.4.3.2}Pixels}{30}
+\contentsline {subsubsection}{\numberline {6.4.3.3}Pos}{30}
+\contentsline {subsubsection}{\numberline {6.4.3.4}Pos}{30}
+\contentsline {subsubsection}{\numberline {6.4.3.5}Size}{30}
+\contentsline {subsubsection}{\numberline {6.4.3.6}Width}{31}
+\contentsline {section}{\numberline {6.5}FTBufferFont Class Reference}{32}
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{32}
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{32}
+\contentsline {subsubsection}{\numberline {6.5.2.1}FTBufferFont}{32}
+\contentsline {subsubsection}{\numberline {6.5.2.2}FTBufferFont}{33}
+\contentsline {subsubsection}{\numberline {6.5.2.3}$\sim $FTBufferFont}{33}
+\contentsline {subsection}{\numberline {6.5.3}Member Function Documentation}{33}
+\contentsline {subsubsection}{\numberline {6.5.3.1}MakeGlyph}{33}
+\contentsline {section}{\numberline {6.6}FTBufferGlyph Class Reference}{34}
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{34}
+\contentsline {subsection}{\numberline {6.6.2}Constructor \& Destructor Documentation}{34}
+\contentsline {subsubsection}{\numberline {6.6.2.1}FTBufferGlyph}{34}
+\contentsline {subsubsection}{\numberline {6.6.2.2}$\sim $FTBufferGlyph}{34}
+\contentsline {subsection}{\numberline {6.6.3}Member Function Documentation}{35}
+\contentsline {subsubsection}{\numberline {6.6.3.1}Render}{35}
+\contentsline {section}{\numberline {6.7}FTExtrudeFont Class Reference}{36}
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{36}
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{36}
+\contentsline {subsubsection}{\numberline {6.7.2.1}FTExtrudeFont}{36}
+\contentsline {subsubsection}{\numberline {6.7.2.2}FTExtrudeFont}{37}
+\contentsline {subsubsection}{\numberline {6.7.2.3}$\sim $FTExtrudeFont}{37}
+\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{37}
+\contentsline {subsubsection}{\numberline {6.7.3.1}MakeGlyph}{37}
+\contentsline {section}{\numberline {6.8}FTExtrudeGlyph Class Reference}{38}
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{38}
+\contentsline {subsection}{\numberline {6.8.2}Constructor \& Destructor Documentation}{38}
+\contentsline {subsubsection}{\numberline {6.8.2.1}FTExtrudeGlyph}{38}
+\contentsline {subsubsection}{\numberline {6.8.2.2}$\sim $FTExtrudeGlyph}{39}
+\contentsline {subsection}{\numberline {6.8.3}Member Function Documentation}{39}
+\contentsline {subsubsection}{\numberline {6.8.3.1}Render}{39}
+\contentsline {section}{\numberline {6.9}FTFont Class Reference}{40}
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{42}
+\contentsline {subsection}{\numberline {6.9.2}Constructor \& Destructor Documentation}{42}
+\contentsline {subsubsection}{\numberline {6.9.2.1}FTFont}{42}
+\contentsline {subsubsection}{\numberline {6.9.2.2}FTFont}{43}
+\contentsline {subsubsection}{\numberline {6.9.2.3}$\sim $FTFont}{43}
+\contentsline {subsection}{\numberline {6.9.3}Member Function Documentation}{43}
+\contentsline {subsubsection}{\numberline {6.9.3.1}Advance}{43}
+\contentsline {subsubsection}{\numberline {6.9.3.2}Advance}{43}
+\contentsline {subsubsection}{\numberline {6.9.3.3}Ascender}{44}
+\contentsline {subsubsection}{\numberline {6.9.3.4}Attach}{44}
+\contentsline {subsubsection}{\numberline {6.9.3.5}Attach}{44}
+\contentsline {subsubsection}{\numberline {6.9.3.6}BBox}{44}
+\contentsline {subsubsection}{\numberline {6.9.3.7}BBox}{45}
+\contentsline {subsubsection}{\numberline {6.9.3.8}BBox}{45}
+\contentsline {subsubsection}{\numberline {6.9.3.9}BBox}{45}
+\contentsline {subsubsection}{\numberline {6.9.3.10}CharMap}{46}
+\contentsline {subsubsection}{\numberline {6.9.3.11}CharMapCount}{46}
+\contentsline {subsubsection}{\numberline {6.9.3.12}CharMapList}{46}
+\contentsline {subsubsection}{\numberline {6.9.3.13}Depth}{46}
+\contentsline {subsubsection}{\numberline {6.9.3.14}Descender}{47}
+\contentsline {subsubsection}{\numberline {6.9.3.15}Error}{47}
+\contentsline {subsubsection}{\numberline {6.9.3.16}FaceSize}{47}
+\contentsline {subsubsection}{\numberline {6.9.3.17}FaceSize}{47}
+\contentsline {subsubsection}{\numberline {6.9.3.18}GlyphLoadFlags}{47}
+\contentsline {subsubsection}{\numberline {6.9.3.19}LineHeight}{48}
+\contentsline {subsubsection}{\numberline {6.9.3.20}MakeGlyph}{48}
+\contentsline {subsubsection}{\numberline {6.9.3.21}Outset}{48}
+\contentsline {subsubsection}{\numberline {6.9.3.22}Outset}{48}
+\contentsline {subsubsection}{\numberline {6.9.3.23}Render}{48}
+\contentsline {subsubsection}{\numberline {6.9.3.24}Render}{49}
+\contentsline {subsubsection}{\numberline {6.9.3.25}UseDisplayList}{49}
+\contentsline {subsection}{\numberline {6.9.4}Friends And Related Function Documentation}{49}
+\contentsline {subsubsection}{\numberline {6.9.4.1}FTBitmapFont}{49}
+\contentsline {subsubsection}{\numberline {6.9.4.2}FTBufferFont}{49}
+\contentsline {subsubsection}{\numberline {6.9.4.3}FTExtrudeFont}{50}
+\contentsline {subsubsection}{\numberline {6.9.4.4}FTFontImpl}{50}
+\contentsline {subsubsection}{\numberline {6.9.4.5}FTOutlineFont}{50}
+\contentsline {subsubsection}{\numberline {6.9.4.6}FTPixmapFont}{50}
+\contentsline {subsubsection}{\numberline {6.9.4.7}FTPolygonFont}{50}
+\contentsline {subsubsection}{\numberline {6.9.4.8}FTTextureFont}{50}
+\contentsline {section}{\numberline {6.10}FTGlyph Class Reference}{51}
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{52}
+\contentsline {subsection}{\numberline {6.10.2}Constructor \& Destructor Documentation}{52}
+\contentsline {subsubsection}{\numberline {6.10.2.1}FTGlyph}{52}
+\contentsline {subsubsection}{\numberline {6.10.2.2}$\sim $FTGlyph}{52}
+\contentsline {subsection}{\numberline {6.10.3}Member Function Documentation}{52}
+\contentsline {subsubsection}{\numberline {6.10.3.1}Advance}{52}
+\contentsline {subsubsection}{\numberline {6.10.3.2}BBox}{52}
+\contentsline {subsubsection}{\numberline {6.10.3.3}Error}{52}
+\contentsline {subsubsection}{\numberline {6.10.3.4}Render}{53}
+\contentsline {subsection}{\numberline {6.10.4}Friends And Related Function Documentation}{53}
+\contentsline {subsubsection}{\numberline {6.10.4.1}FTBitmapGlyph}{53}
+\contentsline {subsubsection}{\numberline {6.10.4.2}FTBufferGlyph}{53}
+\contentsline {subsubsection}{\numberline {6.10.4.3}FTExtrudeGlyph}{53}
+\contentsline {subsubsection}{\numberline {6.10.4.4}FTOutlineGlyph}{53}
+\contentsline {subsubsection}{\numberline {6.10.4.5}FTPixmapGlyph}{53}
+\contentsline {subsubsection}{\numberline {6.10.4.6}FTPolygonGlyph}{53}
+\contentsline {subsubsection}{\numberline {6.10.4.7}FTTextureGlyph}{53}
+\contentsline {section}{\numberline {6.11}FTLayout Class Reference}{54}
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{54}
+\contentsline {subsection}{\numberline {6.11.2}Constructor \& Destructor Documentation}{55}
+\contentsline {subsubsection}{\numberline {6.11.2.1}FTLayout}{55}
+\contentsline {subsubsection}{\numberline {6.11.2.2}$\sim $FTLayout}{55}
+\contentsline {subsection}{\numberline {6.11.3}Member Function Documentation}{55}
+\contentsline {subsubsection}{\numberline {6.11.3.1}BBox}{55}
+\contentsline {subsubsection}{\numberline {6.11.3.2}BBox}{55}
+\contentsline {subsubsection}{\numberline {6.11.3.3}Error}{56}
+\contentsline {subsubsection}{\numberline {6.11.3.4}Render}{56}
+\contentsline {subsubsection}{\numberline {6.11.3.5}Render}{56}
+\contentsline {subsection}{\numberline {6.11.4}Friends And Related Function Documentation}{56}
+\contentsline {subsubsection}{\numberline {6.11.4.1}FTSimpleLayout}{56}
+\contentsline {section}{\numberline {6.12}FTOutlineFont Class Reference}{57}
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{57}
+\contentsline {subsection}{\numberline {6.12.2}Constructor \& Destructor Documentation}{57}
+\contentsline {subsubsection}{\numberline {6.12.2.1}FTOutlineFont}{57}
+\contentsline {subsubsection}{\numberline {6.12.2.2}FTOutlineFont}{58}
+\contentsline {subsubsection}{\numberline {6.12.2.3}$\sim $FTOutlineFont}{58}
+\contentsline {subsection}{\numberline {6.12.3}Member Function Documentation}{58}
+\contentsline {subsubsection}{\numberline {6.12.3.1}MakeGlyph}{58}
+\contentsline {section}{\numberline {6.13}FTOutlineGlyph Class Reference}{59}
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{59}
+\contentsline {subsection}{\numberline {6.13.2}Constructor \& Destructor Documentation}{59}
+\contentsline {subsubsection}{\numberline {6.13.2.1}FTOutlineGlyph}{59}
+\contentsline {subsubsection}{\numberline {6.13.2.2}$\sim $FTOutlineGlyph}{59}
+\contentsline {subsection}{\numberline {6.13.3}Member Function Documentation}{60}
+\contentsline {subsubsection}{\numberline {6.13.3.1}Render}{60}
+\contentsline {section}{\numberline {6.14}FTPixmapFont Class Reference}{61}
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{61}
+\contentsline {subsection}{\numberline {6.14.2}Constructor \& Destructor Documentation}{61}
+\contentsline {subsubsection}{\numberline {6.14.2.1}FTPixmapFont}{61}
+\contentsline {subsubsection}{\numberline {6.14.2.2}FTPixmapFont}{62}
+\contentsline {subsubsection}{\numberline {6.14.2.3}$\sim $FTPixmapFont}{62}
+\contentsline {subsection}{\numberline {6.14.3}Member Function Documentation}{62}
+\contentsline {subsubsection}{\numberline {6.14.3.1}MakeGlyph}{62}
+\contentsline {section}{\numberline {6.15}FTPixmapGlyph Class Reference}{63}
+\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{63}
+\contentsline {subsection}{\numberline {6.15.2}Constructor \& Destructor Documentation}{63}
+\contentsline {subsubsection}{\numberline {6.15.2.1}FTPixmapGlyph}{63}
+\contentsline {subsubsection}{\numberline {6.15.2.2}$\sim $FTPixmapGlyph}{63}
+\contentsline {subsection}{\numberline {6.15.3}Member Function Documentation}{64}
+\contentsline {subsubsection}{\numberline {6.15.3.1}Render}{64}
+\contentsline {section}{\numberline {6.16}FTPoint Class Reference}{65}
+\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{66}
+\contentsline {subsection}{\numberline {6.16.2}Constructor \& Destructor Documentation}{66}
+\contentsline {subsubsection}{\numberline {6.16.2.1}FTPoint}{66}
+\contentsline {subsubsection}{\numberline {6.16.2.2}FTPoint}{66}
+\contentsline {subsubsection}{\numberline {6.16.2.3}FTPoint}{67}
+\contentsline {subsection}{\numberline {6.16.3}Member Function Documentation}{67}
+\contentsline {subsubsection}{\numberline {6.16.3.1}Normalise}{67}
+\contentsline {subsubsection}{\numberline {6.16.3.2}operator const FTGL\_\discretionary {-}{}{}DOUBLE $\ast $}{67}
+\contentsline {subsubsection}{\numberline {6.16.3.3}operator$\ast $}{67}
+\contentsline {subsubsection}{\numberline {6.16.3.4}operator+}{67}
+\contentsline {subsubsection}{\numberline {6.16.3.5}operator+=}{68}
+\contentsline {subsubsection}{\numberline {6.16.3.6}operator-}{68}
+\contentsline {subsubsection}{\numberline {6.16.3.7}operator-=}{68}
+\contentsline {subsubsection}{\numberline {6.16.3.8}operator$^\wedge $}{69}
+\contentsline {subsubsection}{\numberline {6.16.3.9}X}{69}
+\contentsline {subsubsection}{\numberline {6.16.3.10}X}{69}
+\contentsline {subsubsection}{\numberline {6.16.3.11}Xf}{69}
+\contentsline {subsubsection}{\numberline {6.16.3.12}Y}{69}
+\contentsline {subsubsection}{\numberline {6.16.3.13}Y}{69}
+\contentsline {subsubsection}{\numberline {6.16.3.14}Yf}{69}
+\contentsline {subsubsection}{\numberline {6.16.3.15}Z}{70}
+\contentsline {subsubsection}{\numberline {6.16.3.16}Z}{70}
+\contentsline {subsubsection}{\numberline {6.16.3.17}Zf}{70}
+\contentsline {subsection}{\numberline {6.16.4}Friends And Related Function Documentation}{70}
+\contentsline {subsubsection}{\numberline {6.16.4.1}operator!=}{70}
+\contentsline {subsubsection}{\numberline {6.16.4.2}operator$\ast $}{70}
+\contentsline {subsubsection}{\numberline {6.16.4.3}operator$\ast $}{70}
+\contentsline {subsubsection}{\numberline {6.16.4.4}operator==}{71}
+\contentsline {section}{\numberline {6.17}FTPolygonFont Class Reference}{72}
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{72}
+\contentsline {subsection}{\numberline {6.17.2}Constructor \& Destructor Documentation}{72}
+\contentsline {subsubsection}{\numberline {6.17.2.1}FTPolygonFont}{72}
+\contentsline {subsubsection}{\numberline {6.17.2.2}FTPolygonFont}{73}
+\contentsline {subsubsection}{\numberline {6.17.2.3}$\sim $FTPolygonFont}{73}
+\contentsline {subsection}{\numberline {6.17.3}Member Function Documentation}{73}
+\contentsline {subsubsection}{\numberline {6.17.3.1}MakeGlyph}{73}
+\contentsline {section}{\numberline {6.18}FTPolygonGlyph Class Reference}{74}
+\contentsline {subsection}{\numberline {6.18.1}Detailed Description}{74}
+\contentsline {subsection}{\numberline {6.18.2}Constructor \& Destructor Documentation}{74}
+\contentsline {subsubsection}{\numberline {6.18.2.1}FTPolygonGlyph}{74}
+\contentsline {subsubsection}{\numberline {6.18.2.2}$\sim $FTPolygonGlyph}{74}
+\contentsline {subsection}{\numberline {6.18.3}Member Function Documentation}{75}
+\contentsline {subsubsection}{\numberline {6.18.3.1}Render}{75}
+\contentsline {section}{\numberline {6.19}FTSimpleLayout Class Reference}{76}
+\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{77}
+\contentsline {subsection}{\numberline {6.19.2}Constructor \& Destructor Documentation}{77}
+\contentsline {subsubsection}{\numberline {6.19.2.1}FTSimpleLayout}{77}
+\contentsline {subsubsection}{\numberline {6.19.2.2}$\sim $FTSimpleLayout}{77}
+\contentsline {subsection}{\numberline {6.19.3}Member Function Documentation}{77}
+\contentsline {subsubsection}{\numberline {6.19.3.1}BBox}{77}
+\contentsline {subsubsection}{\numberline {6.19.3.2}BBox}{77}
+\contentsline {subsubsection}{\numberline {6.19.3.3}GetAlignment}{78}
+\contentsline {subsubsection}{\numberline {6.19.3.4}GetFont}{78}
+\contentsline {subsubsection}{\numberline {6.19.3.5}GetLineLength}{78}
+\contentsline {subsubsection}{\numberline {6.19.3.6}GetLineSpacing}{78}
+\contentsline {subsubsection}{\numberline {6.19.3.7}Render}{78}
+\contentsline {subsubsection}{\numberline {6.19.3.8}Render}{79}
+\contentsline {subsubsection}{\numberline {6.19.3.9}SetAlignment}{79}
+\contentsline {subsubsection}{\numberline {6.19.3.10}SetFont}{79}
+\contentsline {subsubsection}{\numberline {6.19.3.11}SetLineLength}{79}
+\contentsline {subsubsection}{\numberline {6.19.3.12}SetLineSpacing}{79}
+\contentsline {section}{\numberline {6.20}FTTextureFont Class Reference}{80}
+\contentsline {subsection}{\numberline {6.20.1}Detailed Description}{80}
+\contentsline {subsection}{\numberline {6.20.2}Constructor \& Destructor Documentation}{80}
+\contentsline {subsubsection}{\numberline {6.20.2.1}FTTextureFont}{80}
+\contentsline {subsubsection}{\numberline {6.20.2.2}FTTextureFont}{81}
+\contentsline {subsubsection}{\numberline {6.20.2.3}$\sim $FTTextureFont}{81}
+\contentsline {subsection}{\numberline {6.20.3}Member Function Documentation}{81}
+\contentsline {subsubsection}{\numberline {6.20.3.1}MakeGlyph}{81}
+\contentsline {section}{\numberline {6.21}FTTextureGlyph Class Reference}{82}
+\contentsline {subsection}{\numberline {6.21.1}Detailed Description}{82}
+\contentsline {subsection}{\numberline {6.21.2}Constructor \& Destructor Documentation}{82}
+\contentsline {subsubsection}{\numberline {6.21.2.1}FTTextureGlyph}{82}
+\contentsline {subsubsection}{\numberline {6.21.2.2}$\sim $FTTextureGlyph}{83}
+\contentsline {subsection}{\numberline {6.21.3}Member Function Documentation}{83}
+\contentsline {subsubsection}{\numberline {6.21.3.1}Render}{83}
+\contentsline {chapter}{\numberline {7}File Documentation}{85}
+\contentsline {section}{\numberline {7.1}faq.dox File Reference}{85}
+\contentsline {section}{\numberline {7.2}FTBBox.h File Reference}{86}
+\contentsline {section}{\numberline {7.3}FTBitmapGlyph.h File Reference}{87}
+\contentsline {subsection}{\numberline {7.3.1}Function Documentation}{87}
+\contentsline {subsubsection}{\numberline {7.3.1.1}ftglCreateBitmapGlyph}{87}
+\contentsline {section}{\numberline {7.4}FTBuffer.h File Reference}{88}
+\contentsline {section}{\numberline {7.5}FTBufferFont.h File Reference}{89}
+\contentsline {subsection}{\numberline {7.5.1}Function Documentation}{89}
+\contentsline {subsubsection}{\numberline {7.5.1.1}ftglCreateBufferFont}{89}
+\contentsline {section}{\numberline {7.6}FTBufferGlyph.h File Reference}{90}
+\contentsline {section}{\numberline {7.7}FTExtrdGlyph.h File Reference}{91}
+\contentsline {subsection}{\numberline {7.7.1}Define Documentation}{91}
+\contentsline {subsubsection}{\numberline {7.7.1.1}FTExtrdGlyph}{91}
+\contentsline {subsection}{\numberline {7.7.2}Function Documentation}{91}
+\contentsline {subsubsection}{\numberline {7.7.2.1}ftglCreateExtrudeGlyph}{91}
+\contentsline {section}{\numberline {7.8}FTFont.h File Reference}{92}
+\contentsline {subsection}{\numberline {7.8.1}Typedef Documentation}{93}
+\contentsline {subsubsection}{\numberline {7.8.1.1}FTGLfont}{93}
+\contentsline {subsection}{\numberline {7.8.2}Function Documentation}{93}
+\contentsline {subsubsection}{\numberline {7.8.2.1}ftglAttachData}{93}
+\contentsline {subsubsection}{\numberline {7.8.2.2}ftglAttachFile}{94}
+\contentsline {subsubsection}{\numberline {7.8.2.3}ftglCreateCustomFont}{94}
+\contentsline {subsubsection}{\numberline {7.8.2.4}ftglDestroyFont}{94}
+\contentsline {subsubsection}{\numberline {7.8.2.5}ftglGetFontAdvance}{94}
+\contentsline {subsubsection}{\numberline {7.8.2.6}ftglGetFontAscender}{95}
+\contentsline {subsubsection}{\numberline {7.8.2.7}ftglGetFontBBox}{95}
+\contentsline {subsubsection}{\numberline {7.8.2.8}ftglGetFontCharMapCount}{95}
+\contentsline {subsubsection}{\numberline {7.8.2.9}ftglGetFontCharMapList}{95}
+\contentsline {subsubsection}{\numberline {7.8.2.10}ftglGetFontDescender}{96}
+\contentsline {subsubsection}{\numberline {7.8.2.11}ftglGetFontError}{96}
+\contentsline {subsubsection}{\numberline {7.8.2.12}ftglGetFontFaceSize}{96}
+\contentsline {subsubsection}{\numberline {7.8.2.13}ftglGetFontLineHeight}{96}
+\contentsline {subsubsection}{\numberline {7.8.2.14}ftglRenderFont}{97}
+\contentsline {subsubsection}{\numberline {7.8.2.15}ftglSetFontCharMap}{97}
+\contentsline {subsubsection}{\numberline {7.8.2.16}ftglSetFontDepth}{97}
+\contentsline {subsubsection}{\numberline {7.8.2.17}ftglSetFontDisplayList}{97}
+\contentsline {subsubsection}{\numberline {7.8.2.18}ftglSetFontFaceSize}{97}
+\contentsline {subsubsection}{\numberline {7.8.2.19}ftglSetFontOutset}{98}
+\contentsline {section}{\numberline {7.9}ftgl.dox File Reference}{99}
+\contentsline {section}{\numberline {7.10}ftgl.h File Reference}{100}
+\contentsline {subsection}{\numberline {7.10.1}Define Documentation}{101}
+\contentsline {subsubsection}{\numberline {7.10.1.1}FTGL\_\discretionary {-}{}{}BEGIN\_\discretionary {-}{}{}C\_\discretionary {-}{}{}DECLS}{101}
+\contentsline {subsubsection}{\numberline {7.10.1.2}FTGL\_\discretionary {-}{}{}END\_\discretionary {-}{}{}C\_\discretionary {-}{}{}DECLS}{101}
+\contentsline {subsubsection}{\numberline {7.10.1.3}FTGL\_\discretionary {-}{}{}EXPORT}{101}
+\contentsline {subsection}{\numberline {7.10.2}Typedef Documentation}{101}
+\contentsline {subsubsection}{\numberline {7.10.2.1}FTGL\_\discretionary {-}{}{}DOUBLE}{101}
+\contentsline {subsubsection}{\numberline {7.10.2.2}FTGL\_\discretionary {-}{}{}FLOAT}{101}
+\contentsline {section}{\numberline {7.11}FTGLBitmapFont.h File Reference}{102}
+\contentsline {subsection}{\numberline {7.11.1}Define Documentation}{102}
+\contentsline {subsubsection}{\numberline {7.11.1.1}FTGLBitmapFont}{102}
+\contentsline {subsection}{\numberline {7.11.2}Function Documentation}{102}
+\contentsline {subsubsection}{\numberline {7.11.2.1}ftglCreateBitmapFont}{102}
+\contentsline {section}{\numberline {7.12}FTGLExtrdFont.h File Reference}{103}
+\contentsline {subsection}{\numberline {7.12.1}Define Documentation}{103}
+\contentsline {subsubsection}{\numberline {7.12.1.1}FTGLExtrdFont}{103}
+\contentsline {subsection}{\numberline {7.12.2}Function Documentation}{103}
+\contentsline {subsubsection}{\numberline {7.12.2.1}ftglCreateExtrudeFont}{103}
+\contentsline {section}{\numberline {7.13}FTGLOutlineFont.h File Reference}{104}
+\contentsline {subsection}{\numberline {7.13.1}Define Documentation}{104}
+\contentsline {subsubsection}{\numberline {7.13.1.1}FTGLOutlineFont}{104}
+\contentsline {subsection}{\numberline {7.13.2}Function Documentation}{104}
+\contentsline {subsubsection}{\numberline {7.13.2.1}ftglCreateOutlineFont}{104}
+\contentsline {section}{\numberline {7.14}FTGLPixmapFont.h File Reference}{105}
+\contentsline {subsection}{\numberline {7.14.1}Define Documentation}{105}
+\contentsline {subsubsection}{\numberline {7.14.1.1}FTGLPixmapFont}{105}
+\contentsline {subsection}{\numberline {7.14.2}Function Documentation}{105}
+\contentsline {subsubsection}{\numberline {7.14.2.1}ftglCreatePixmapFont}{105}
+\contentsline {section}{\numberline {7.15}FTGLPolygonFont.h File Reference}{106}
+\contentsline {subsection}{\numberline {7.15.1}Define Documentation}{106}
+\contentsline {subsubsection}{\numberline {7.15.1.1}FTGLPolygonFont}{106}
+\contentsline {subsection}{\numberline {7.15.2}Function Documentation}{106}
+\contentsline {subsubsection}{\numberline {7.15.2.1}ftglCreatePolygonFont}{106}
+\contentsline {section}{\numberline {7.16}FTGLTextureFont.h File Reference}{107}
+\contentsline {subsection}{\numberline {7.16.1}Define Documentation}{107}
+\contentsline {subsubsection}{\numberline {7.16.1.1}FTGLTextureFont}{107}
+\contentsline {subsection}{\numberline {7.16.2}Function Documentation}{107}
+\contentsline {subsubsection}{\numberline {7.16.2.1}ftglCreateTextureFont}{107}
+\contentsline {section}{\numberline {7.17}FTGlyph.h File Reference}{108}
+\contentsline {subsection}{\numberline {7.17.1}Typedef Documentation}{108}
+\contentsline {subsubsection}{\numberline {7.17.1.1}FTGLglyph}{108}
+\contentsline {subsection}{\numberline {7.17.2}Function Documentation}{109}
+\contentsline {subsubsection}{\numberline {7.17.2.1}ftglCreateCustomGlyph}{109}
+\contentsline {subsubsection}{\numberline {7.17.2.2}ftglDestroyGlyph}{109}
+\contentsline {subsubsection}{\numberline {7.17.2.3}ftglGetGlyphAdvance}{109}
+\contentsline {subsubsection}{\numberline {7.17.2.4}ftglGetGlyphBBox}{109}
+\contentsline {subsubsection}{\numberline {7.17.2.5}ftglGetGlyphError}{110}
+\contentsline {subsubsection}{\numberline {7.17.2.6}ftglRenderGlyph}{110}
+\contentsline {section}{\numberline {7.18}FTLayout.h File Reference}{111}
+\contentsline {subsection}{\numberline {7.18.1}Typedef Documentation}{111}
+\contentsline {subsubsection}{\numberline {7.18.1.1}FTGLlayout}{111}
+\contentsline {subsection}{\numberline {7.18.2}Function Documentation}{111}
+\contentsline {subsubsection}{\numberline {7.18.2.1}ftglDestroyLayout}{111}
+\contentsline {subsubsection}{\numberline {7.18.2.2}ftglGetLayoutBBox}{112}
+\contentsline {subsubsection}{\numberline {7.18.2.3}ftglGetLayoutError}{112}
+\contentsline {subsubsection}{\numberline {7.18.2.4}ftglRenderLayout}{112}
+\contentsline {section}{\numberline {7.19}FTOutlineGlyph.h File Reference}{113}
+\contentsline {subsection}{\numberline {7.19.1}Function Documentation}{113}
+\contentsline {subsubsection}{\numberline {7.19.1.1}ftglCreateOutlineGlyph}{113}
+\contentsline {section}{\numberline {7.20}FTPixmapGlyph.h File Reference}{114}
+\contentsline {subsection}{\numberline {7.20.1}Function Documentation}{114}
+\contentsline {subsubsection}{\numberline {7.20.1.1}ftglCreatePixmapGlyph}{114}
+\contentsline {section}{\numberline {7.21}FTPoint.h File Reference}{115}
+\contentsline {section}{\numberline {7.22}FTPolyGlyph.h File Reference}{116}
+\contentsline {subsection}{\numberline {7.22.1}Define Documentation}{116}
+\contentsline {subsubsection}{\numberline {7.22.1.1}FTPolyGlyph}{116}
+\contentsline {subsection}{\numberline {7.22.2}Function Documentation}{116}
+\contentsline {subsubsection}{\numberline {7.22.2.1}ftglCreatePolygonGlyph}{116}
+\contentsline {section}{\numberline {7.23}FTSimpleLayout.h File Reference}{117}
+\contentsline {subsection}{\numberline {7.23.1}Function Documentation}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.1}ftglCreateSimpleLayout}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.2}ftglGetLayoutAlignement}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.3}ftglGetLayoutFont}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.4}ftglGetLayoutLineLength}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.5}ftglGetLayoutLineSpacing}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.6}ftglSetLayoutAlignment}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.7}ftglSetLayoutFont}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.8}ftglSetLayoutLineLength}{117}
+\contentsline {subsubsection}{\numberline {7.23.1.9}ftglSetLayoutLineSpacing}{117}
+\contentsline {section}{\numberline {7.24}FTTextureGlyph.h File Reference}{118}
+\contentsline {subsection}{\numberline {7.24.1}Function Documentation}{118}
+\contentsline {subsubsection}{\numberline {7.24.1.1}ftglCreateTextureGlyph}{118}
+\contentsline {section}{\numberline {7.25}projects\_\discretionary {-}{}{}using\_\discretionary {-}{}{}ftgl.txt File Reference}{119}
+\contentsline {section}{\numberline {7.26}tutorial.dox File Reference}{120}

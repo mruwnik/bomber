@@ -7,11 +7,15 @@ Board* twin::board = 0;
  * powstaje objekt ktory z pozoru sie nie rozni od innych ale ktory naprawde sie sklada z 2 objektow, gdzie pierwszy nie jest
  * aktywny, a drugi jest. co prawda bomby sa elementami aktywnymi, ale z punktu widzenia planszy, gdy gracz dopiero co ja 
  * postawi, to jest nieaktywna bo gracz nia steruje. */
+#ifdef NCURSES
 twin::twin(object* o, object* t, int X, int Y): object(' '), one(o), two(t), x(X), y(Y), f(0){
+/**/	two->changeMask(A_STANDOUT,Or); // nie potrzebne - uzywany do upiekszania wypisywania znakow
+#else
+twin::twin(object* o, object* t, int X, int Y): object(1), one(o), two(t), x(X), y(Y), f(0){
+#endif
 	board->board[y][x]=this;
 	two->setid(-1);
 	id=board->add2list(this);
-	two->changeMask(A_STANDOUT,Or); // nie potrzebne - uzywany do upiekszania wypisywania znakow
 }
 
 void twin::set(Board* b){ board=b;}
@@ -24,6 +28,13 @@ void twin::setid(int i){id =i;}
  * wyswietlane znak drugiego objektu, czyli ten ktory jest aktywny (przyczym, co prawda, jest on podswietlany wiec widac czy
  * ma pod soba bombe czy nie) */
 void twin::print(){
+#ifndef NCURSES	
+	glPushMatrix();
+#endif
+	one->print();
+#ifndef NCURSES	
+	glPopMatrix();
+#endif
 	two->print();
 }
 
@@ -41,20 +52,21 @@ int twin::move(){
 //		return 1;
 //	}
 	f++;
+//	board->board[y][x] = two;
 	if((a=two->move()) > 1){
 		switch(a){
-			case 2: board->board[y-1][x] = two; break;
-			case 3: board->board[y][x+1] = two; break;
-			case 4: board->board[y+1][x] = two; break;
-			case 5: board->board[y][x-1] = two; break;
-			case 7: delete this; return 0;
+			case up: board->board[y-1][x] = two; break;
+			case right: board->board[y][x+1] = two; break;
+			case down: board->board[y+1][x] = two; break;
+			case left: board->board[y][x-1] = two; break;
+			case kill: return 0;
 		}
-		two->changeMask(~A_STANDOUT,And);
 		two->getid();	// drugi objekt musi byc potem wpisany spowrotem do listy aktywnych objektow
-		two=0;
+		two=NULL;
 		delete this;	// jako, ze juz nie ma potrzeby na tego objektu nalezy go usunac
 		return 0;
 	}
+//	board->board[y][x] = one;
 	f=0;
 	return 1;
 }
@@ -63,16 +75,17 @@ void twin::die(){delete this;}
 
 twin::~twin(){	// usuwa odpowiedni objekt a pozostala kladzie spowrotem na plansze
 	if(f){
-		delete two;
+		//delete two;
+		if(two)
+			delete two;
 		board->board[y][x]=one;
 	}
 	else{
 		board->board[y][x]=two;
-		two->changeMask(~A_STANDOUT,And);
 		two->getid();
 		delete one;
 	}
-	one=two=0;
+	one=two=NULL;
 	board->dellist(id);
 }
 

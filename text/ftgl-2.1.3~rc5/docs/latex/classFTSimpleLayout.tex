@@ -1,0 +1,216 @@
+\section{FTSimpleLayout Class Reference}
+\label{classFTSimpleLayout}\index{FTSimpleLayout@{FTSimpleLayout}}
+\doxyref{FTSimpleLayout}{p.}{classFTSimpleLayout} is a specialisation of \doxyref{FTLayout}{p.}{classFTLayout} for simple text boxes.  
+
+
+{\tt \#include $<$FTSimpleLayout.h$>$}
+
+Inheritance diagram for FTSimpleLayout::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTSimpleLayout}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTSimpleLayout} ()
+\begin{CompactList}\small\item\em Initializes line spacing to 1.0, alignment to ALIGN\_\-LEFT and wrap to 100.0. \item\end{CompactList}\item 
+{\bf $\sim$FTSimpleLayout} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual {\bf FTBBox} {\bf BBox} (const char $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}())
+\begin{CompactList}\small\item\em Get the bounding box for a formatted string. \item\end{CompactList}\item 
+virtual {\bf FTBBox} {\bf BBox} (const wchar\_\-t $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}())
+\begin{CompactList}\small\item\em Get the bounding box for a formatted string. \item\end{CompactList}\item 
+virtual void {\bf Render} (const char $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}(), int renderMode=FTGL::RENDER\_\-ALL)
+\begin{CompactList}\small\item\em Render a string of characters. \item\end{CompactList}\item 
+virtual void {\bf Render} (const wchar\_\-t $\ast$string, const int len=-1, {\bf FTPoint} position={\bf FTPoint}(), int renderMode=FTGL::RENDER\_\-ALL)
+\begin{CompactList}\small\item\em Render a string of characters. \item\end{CompactList}\item 
+void {\bf SetFont} ({\bf FTFont} $\ast$fontInit)
+\begin{CompactList}\small\item\em Set the font to use for rendering the text. \item\end{CompactList}\item 
+{\bf FTFont} $\ast$ {\bf GetFont} ()
+\item 
+void {\bf SetLineLength} (const float LineLength)
+\begin{CompactList}\small\item\em The maximum line length for formatting text. \item\end{CompactList}\item 
+float {\bf GetLineLength} () const 
+\item 
+void {\bf SetAlignment} (const {\bf FTGL::TextAlignment} Alignment)
+\begin{CompactList}\small\item\em The text alignment mode used to distribute space within a line or rendered text. \item\end{CompactList}\item 
+{\bf FTGL::TextAlignment} {\bf GetAlignment} () const 
+\item 
+void {\bf SetLineSpacing} (const float LineSpacing)
+\begin{CompactList}\small\item\em Sets the line height. \item\end{CompactList}\item 
+float {\bf GetLineSpacing} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTSimpleLayout}{p.}{classFTSimpleLayout} is a specialisation of \doxyref{FTLayout}{p.}{classFTLayout} for simple text boxes. 
+
+This class has basic support for text wrapping, left, right and centered alignment, and text justification.
+
+\begin{Desc}
+\item[See also:]\doxyref{FTLayout}{p.}{classFTLayout} \end{Desc}
+
+
+Definition at line 49 of file FTSimpleLayout.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTSimpleLayout@{FTSimpleLayout}!FTSimpleLayout@{FTSimpleLayout}}
+\index{FTSimpleLayout@{FTSimpleLayout}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{FTSimpleLayout}]{\setlength{\rightskip}{0pt plus 5cm}FTSimpleLayout::FTSimpleLayout ()}\label{classFTSimpleLayout_5627935363d9b0b3b7e02d1a237a3084}
+
+
+Initializes line spacing to 1.0, alignment to ALIGN\_\-LEFT and wrap to 100.0. 
+
+\index{FTSimpleLayout@{FTSimpleLayout}!$\sim$FTSimpleLayout@{$\sim$FTSimpleLayout}}
+\index{$\sim$FTSimpleLayout@{$\sim$FTSimpleLayout}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{$\sim$FTSimpleLayout}]{\setlength{\rightskip}{0pt plus 5cm}FTSimpleLayout::$\sim$FTSimpleLayout ()}\label{classFTSimpleLayout_f924484b92ee910a8261ed4d27ad94a8}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTSimpleLayout@{FTSimpleLayout}!BBox@{BBox}}
+\index{BBox@{BBox}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{BBox}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTBBox} FTSimpleLayout::BBox (const wchar\_\-t $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTSimpleLayout_fdec41319af9fbeec0316e38d0661107}
+
+
+Get the bounding box for a formatted string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]A wchar\_\-t string. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be checked until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The corresponding bounding box. \end{Desc}
+
+
+Implements {\bf FTLayout} \doxyref{}{p.}{classFTLayout_bf64582771a2281d901af1e074535c2a}.\index{FTSimpleLayout@{FTSimpleLayout}!BBox@{BBox}}
+\index{BBox@{BBox}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{BBox}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf FTBBox} FTSimpleLayout::BBox (const char $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTSimpleLayout_132c938c66912fe0b2360152349f887c}
+
+
+Get the bounding box for a formatted string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]A char string. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be checked until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The corresponding bounding box. \end{Desc}
+
+
+Implements {\bf FTLayout} \doxyref{}{p.}{classFTLayout_e79561f22ee39e69ce27d84b1d47fe2e}.\index{FTSimpleLayout@{FTSimpleLayout}!GetAlignment@{GetAlignment}}
+\index{GetAlignment@{GetAlignment}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{GetAlignment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FTGL::TextAlignment} FTSimpleLayout::GetAlignment () const}\label{classFTSimpleLayout_98afc657f353d719a84cba5576717a5b}
+
+
+\begin{Desc}
+\item[Returns:]The text alignment mode. \end{Desc}
+\index{FTSimpleLayout@{FTSimpleLayout}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{GetFont}]{\setlength{\rightskip}{0pt plus 5cm}{\bf FTFont}$\ast$ FTSimpleLayout::GetFont ()}\label{classFTSimpleLayout_0c14d2816d57c13ca71bef1e106d6ab3}
+
+
+\begin{Desc}
+\item[Returns:]The current font. \end{Desc}
+\index{FTSimpleLayout@{FTSimpleLayout}!GetLineLength@{GetLineLength}}
+\index{GetLineLength@{GetLineLength}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{GetLineLength}]{\setlength{\rightskip}{0pt plus 5cm}float FTSimpleLayout::GetLineLength () const}\label{classFTSimpleLayout_cc1572a775a397847bfab19524f2fa62}
+
+
+\begin{Desc}
+\item[Returns:]The current line length. \end{Desc}
+\index{FTSimpleLayout@{FTSimpleLayout}!GetLineSpacing@{GetLineSpacing}}
+\index{GetLineSpacing@{GetLineSpacing}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{GetLineSpacing}]{\setlength{\rightskip}{0pt plus 5cm}float FTSimpleLayout::GetLineSpacing () const}\label{classFTSimpleLayout_cb297d1855834539378de845182005c3}
+
+
+\begin{Desc}
+\item[Returns:]The line spacing. \end{Desc}
+\index{FTSimpleLayout@{FTSimpleLayout}!Render@{Render}}
+\index{Render@{Render}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTSimpleLayout::Render (const wchar\_\-t $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()}, \/  int {\em renderMode} = {\tt FTGL::RENDER\_\-ALL})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTSimpleLayout_eea681385258bf9cd20c355555c9dbaf}
+
+
+Render a string of characters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]wchar\_\-t string to be output. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be displayed until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \item[{\em renderMode}]Render mode to display (optional) \end{description}
+\end{Desc}
+
+
+Implements {\bf FTLayout} \doxyref{}{p.}{classFTLayout_793a7b371c885420d73acc56a667d53a}.\index{FTSimpleLayout@{FTSimpleLayout}!Render@{Render}}
+\index{Render@{Render}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void FTSimpleLayout::Render (const char $\ast$ {\em string}, \/  const int {\em len} = {\tt -1}, \/  {\bf FTPoint} {\em position} = {\tt {\bf FTPoint}()}, \/  int {\em renderMode} = {\tt FTGL::RENDER\_\-ALL})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTSimpleLayout_fc122918b71e571155ca714eeb5c4888}
+
+
+Render a string of characters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em string}]'C' style string to be output. \item[{\em len}]The length of the string. If $<$ 0 then all characters will be displayed until a null character is encountered (optional). \item[{\em position}]The pen position of the first character (optional). \item[{\em renderMode}]Render mode to display (optional) \end{description}
+\end{Desc}
+
+
+Implements {\bf FTLayout} \doxyref{}{p.}{classFTLayout_0e18bf877bbfe871e93ec0ebf1437a0f}.\index{FTSimpleLayout@{FTSimpleLayout}!SetAlignment@{SetAlignment}}
+\index{SetAlignment@{SetAlignment}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{SetAlignment}]{\setlength{\rightskip}{0pt plus 5cm}void FTSimpleLayout::SetAlignment (const {\bf FTGL::TextAlignment} {\em Alignment})}\label{classFTSimpleLayout_1aa39810095a4149d6795d159f3a8989}
+
+
+The text alignment mode used to distribute space within a line or rendered text. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Alignment}]The new alignment mode. \end{description}
+\end{Desc}
+\index{FTSimpleLayout@{FTSimpleLayout}!SetFont@{SetFont}}
+\index{SetFont@{SetFont}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{SetFont}]{\setlength{\rightskip}{0pt plus 5cm}void FTSimpleLayout::SetFont ({\bf FTFont} $\ast$ {\em fontInit})}\label{classFTSimpleLayout_75492e803d5bc6dee379f2af1656c63d}
+
+
+Set the font to use for rendering the text. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fontInit}]A pointer to the new font. The font is referenced by this but will not be disposed of when this is deleted. \end{description}
+\end{Desc}
+\index{FTSimpleLayout@{FTSimpleLayout}!SetLineLength@{SetLineLength}}
+\index{SetLineLength@{SetLineLength}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{SetLineLength}]{\setlength{\rightskip}{0pt plus 5cm}void FTSimpleLayout::SetLineLength (const float {\em LineLength})}\label{classFTSimpleLayout_fbe232e3486ce1afce63dae3a11cb0c0}
+
+
+The maximum line length for formatting text. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em LineLength}]The new line length. \end{description}
+\end{Desc}
+\index{FTSimpleLayout@{FTSimpleLayout}!SetLineSpacing@{SetLineSpacing}}
+\index{SetLineSpacing@{SetLineSpacing}!FTSimpleLayout@{FTSimpleLayout}}
+\subsubsection[{SetLineSpacing}]{\setlength{\rightskip}{0pt plus 5cm}void FTSimpleLayout::SetLineSpacing (const float {\em LineSpacing})}\label{classFTSimpleLayout_683607be7b7ee5c2272b63b3461ce749}
+
+
+Sets the line height. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em LineSpacing}]The height of each line of text expressed as a percentage of the current fonts line height. \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTSimpleLayout.h}\end{CompactItemize}

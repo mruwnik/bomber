@@ -1,0 +1,73 @@
+\section{FTPixmapGlyph Class Reference}
+\label{classFTPixmapGlyph}\index{FTPixmapGlyph@{FTPixmapGlyph}}
+\doxyref{FTPixmapGlyph}{p.}{classFTPixmapGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating pixmaps.  
+
+
+{\tt \#include $<$FTPixmapGlyph.h$>$}
+
+Inheritance diagram for FTPixmapGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTPixmapGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTPixmapGlyph} (FT\_\-GlyphSlot glyph)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$FTPixmapGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)
+\begin{CompactList}\small\item\em Render this glyph at the current pen position. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTPixmapGlyph}{p.}{classFTPixmapGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for creating pixmaps. 
+
+Definition at line 42 of file FTPixmapGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTPixmapGlyph@{FTPixmapGlyph}!FTPixmapGlyph@{FTPixmapGlyph}}
+\index{FTPixmapGlyph@{FTPixmapGlyph}!FTPixmapGlyph@{FTPixmapGlyph}}
+\subsubsection[{FTPixmapGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTPixmapGlyph::FTPixmapGlyph (FT\_\-GlyphSlot {\em glyph})}\label{classFTPixmapGlyph_3f3978f9c2a8fda401d0ce9ccc2ebb7d}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \end{description}
+\end{Desc}
+\index{FTPixmapGlyph@{FTPixmapGlyph}!$\sim$FTPixmapGlyph@{$\sim$FTPixmapGlyph}}
+\index{$\sim$FTPixmapGlyph@{$\sim$FTPixmapGlyph}!FTPixmapGlyph@{FTPixmapGlyph}}
+\subsubsection[{$\sim$FTPixmapGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTPixmapGlyph::$\sim$FTPixmapGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTPixmapGlyph_4ff9f3d8e748fae9c9c1e704a0fbced5}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTPixmapGlyph@{FTPixmapGlyph}!Render@{Render}}
+\index{Render@{Render}!FTPixmapGlyph@{FTPixmapGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTPixmapGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTPixmapGlyph_c18ec8c2864d45d805e4fac5a980cddd}
+
+
+Render this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implements {\bf FTGlyph} \doxyref{}{p.}{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTPixmapGlyph.h}\end{CompactItemize}

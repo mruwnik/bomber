@@ -7,12 +7,13 @@ class List{
 	int quantity; //liczba elementow pamieci
 	int next; //nastepny pusty element
 	T** storage; //tablica wskaznikow na objekty ktore beda cos robily
-	void inflate(int increase = 10); // powieksza tablice o 'increase'
+	void inflate(int increase = 50); // powieksza tablice o 'increase'
 public:
 	List() : quantity(0), next(0), storage(0) {};
 	int add(T*);			// dodaje element do tablicy i zwraca jego pozycje w tablicy
 	T* operator[](int index) const; // pobiera storage[index]
 	T* remove(int index); 		// usuwa storage[index] z tablicy, przy czym nie usuwa z pamieci
+	void clear();			// czysci cala liste
 	~List();
 };
 
@@ -29,7 +30,7 @@ void List<T>::inflate(int increase){
 
 template<class T>
 int List<T>::add(T* ob){
-	const int inflateBy = 10;
+	const int inflateBy = 50;
 	if(next >= quantity)
 		inflate(inflateBy);
 	storage[next++] = ob;
@@ -57,8 +58,18 @@ T* List<T>::remove(int index){
 }
 
 template<class T>
+void List<T>::clear(){// przy usunieciu ma tylko pozbyc sie pamieci zajetej przez tablicy ktore wskazuje zostawic w spokoju
+	memset(storage, 0, quantity * sizeof(T*));
+	//delete[] storage;
+	//quantity = 0;
+       	next = 0;
+	//storage = (long)0;
+}
+
+template<class T>
 List<T>::~List(){// przy usunieciu ma tylko pozbyc sie pamieci zajetej przez tablicy ktore wskazuje zostawic w spokoju
 	memset(storage, 0, quantity * sizeof(T*));
-	delete storage;
+	delete[] storage;
+	storage = (long)0;
 }
 #endif

@@ -1,0 +1,87 @@
+\section{FTLayout.h File Reference}
+\label{FTLayout_8h}\index{FTLayout.h@{FTLayout.h}}
+{\tt \#include $<$FTGL/ftgl.h$>$}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+class {\bf FTLayout}
+\begin{CompactList}\small\item\em \doxyref{FTLayout}{p.}{classFTLayout} is the interface for layout managers that render text. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Typedefs}
+\begin{CompactItemize}
+\item 
+typedef struct \_\-FTGLlayout {\bf FTGLlayout}
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void {\bf ftglDestroyLayout} ({\bf FTGLlayout} $\ast$layout)
+\begin{CompactList}\small\item\em Destroy an \doxyref{FTGL}{p.}{namespaceFTGL} layout object. \item\end{CompactList}\item 
+void {\bf ftglGetLayoutBBox} ({\bf FTGLlayout} $\ast$layout, const char $\ast$string, float bounds[6])
+\begin{CompactList}\small\item\em Get the bounding box for a string. \item\end{CompactList}\item 
+void {\bf ftglRenderLayout} ({\bf FTGLlayout} $\ast$layout, const char $\ast$string, int mode)
+\begin{CompactList}\small\item\em Render a string of characters. \item\end{CompactList}\item 
+FT\_\-Error {\bf ftglGetLayoutError} ({\bf FTGLlayout} $\ast$layout)
+\begin{CompactList}\small\item\em Query a layout for errors. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{FTLayout.h@{FTLayout.h}!FTGLlayout@{FTGLlayout}}
+\index{FTGLlayout@{FTGLlayout}!FTLayout.h@{FTLayout.h}}
+\subsubsection[{FTGLlayout}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct \_\-FTGLlayout {\bf FTGLlayout}}\label{FTLayout_8h_0aeec097978c2d2c070cf463b6d2a00f}
+
+
+
+
+Definition at line 151 of file FTLayout.h.
+
+\subsection{Function Documentation}
+\index{FTLayout.h@{FTLayout.h}!ftglDestroyLayout@{ftglDestroyLayout}}
+\index{ftglDestroyLayout@{ftglDestroyLayout}!FTLayout.h@{FTLayout.h}}
+\subsubsection[{ftglDestroyLayout}]{\setlength{\rightskip}{0pt plus 5cm}void ftglDestroyLayout ({\bf FTGLlayout} $\ast$ {\em layout})}\label{FTLayout_8h_8a825731fa3f4740fac3549984cf8b6d}
+
+
+Destroy an \doxyref{FTGL}{p.}{namespaceFTGL} layout object. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em layout}]An FTGLlayout$\ast$ object. \end{description}
+\end{Desc}
+\index{FTLayout.h@{FTLayout.h}!ftglGetLayoutBBox@{ftglGetLayoutBBox}}
+\index{ftglGetLayoutBBox@{ftglGetLayoutBBox}!FTLayout.h@{FTLayout.h}}
+\subsubsection[{ftglGetLayoutBBox}]{\setlength{\rightskip}{0pt plus 5cm}void ftglGetLayoutBBox ({\bf FTGLlayout} $\ast$ {\em layout}, \/  const char $\ast$ {\em string}, \/  float {\em bounds}[6])}\label{FTLayout_8h_39fe0c68f82e72915d980d201cf5fede}
+
+
+Get the bounding box for a string. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em layout}]An FTGLlayout$\ast$ object. \item[{\em string}]A char buffer \item[{\em bounds}]An array of 6 float values where the bounding box's lower left near and upper right far 3D coordinates will be stored. \end{description}
+\end{Desc}
+\index{FTLayout.h@{FTLayout.h}!ftglGetLayoutError@{ftglGetLayoutError}}
+\index{ftglGetLayoutError@{ftglGetLayoutError}!FTLayout.h@{FTLayout.h}}
+\subsubsection[{ftglGetLayoutError}]{\setlength{\rightskip}{0pt plus 5cm}FT\_\-Error ftglGetLayoutError ({\bf FTGLlayout} $\ast$ {\em layout})}\label{FTLayout_8h_5f9f222eb0bf9997076e3ac7da8e7f71}
+
+
+Query a layout for errors. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em layout}]An FTGLlayout$\ast$ object. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The current error code. \end{Desc}
+\index{FTLayout.h@{FTLayout.h}!ftglRenderLayout@{ftglRenderLayout}}
+\index{ftglRenderLayout@{ftglRenderLayout}!FTLayout.h@{FTLayout.h}}
+\subsubsection[{ftglRenderLayout}]{\setlength{\rightskip}{0pt plus 5cm}void ftglRenderLayout ({\bf FTGLlayout} $\ast$ {\em layout}, \/  const char $\ast$ {\em string}, \/  int {\em mode})}\label{FTLayout_8h_6e5301b487c422a361fdd469136d9536}
+
+
+Render a string of characters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em layout}]An FTGLlayout$\ast$ object. \item[{\em string}]Char string to be output. \item[{\em mode}]Render mode to display. \end{description}
+\end{Desc}

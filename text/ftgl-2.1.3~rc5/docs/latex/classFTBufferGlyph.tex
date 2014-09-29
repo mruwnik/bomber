@@ -1,0 +1,73 @@
+\section{FTBufferGlyph Class Reference}
+\label{classFTBufferGlyph}\index{FTBufferGlyph@{FTBufferGlyph}}
+\doxyref{FTBufferGlyph}{p.}{classFTBufferGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for memory buffer rendering.  
+
+
+{\tt \#include $<$FTBufferGlyph.h$>$}
+
+Inheritance diagram for FTBufferGlyph::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFTBufferGlyph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+{\bf FTBufferGlyph} (FT\_\-GlyphSlot glyph, {\bf FTBuffer} $\ast$buffer)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+virtual {\bf $\sim$FTBufferGlyph} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual const {\bf FTPoint} \& {\bf Render} (const {\bf FTPoint} \&pen, int renderMode)
+\begin{CompactList}\small\item\em Render this glyph at the current pen position. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{FTBufferGlyph}{p.}{classFTBufferGlyph} is a specialisation of \doxyref{FTGlyph}{p.}{classFTGlyph} for memory buffer rendering. 
+
+Definition at line 40 of file FTBufferGlyph.h.
+
+\subsection{Constructor \& Destructor Documentation}
+\index{FTBufferGlyph@{FTBufferGlyph}!FTBufferGlyph@{FTBufferGlyph}}
+\index{FTBufferGlyph@{FTBufferGlyph}!FTBufferGlyph@{FTBufferGlyph}}
+\subsubsection[{FTBufferGlyph}]{\setlength{\rightskip}{0pt plus 5cm}FTBufferGlyph::FTBufferGlyph (FT\_\-GlyphSlot {\em glyph}, \/  {\bf FTBuffer} $\ast$ {\em buffer})}\label{classFTBufferGlyph_48b9e99cb65964ae32776f26da65c25e}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em glyph}]The Freetype glyph to be processed \item[{\em buffer}]An \doxyref{FTBuffer}{p.}{classFTBuffer} object in which to render the glyph. \end{description}
+\end{Desc}
+\index{FTBufferGlyph@{FTBufferGlyph}!$\sim$FTBufferGlyph@{$\sim$FTBufferGlyph}}
+\index{$\sim$FTBufferGlyph@{$\sim$FTBufferGlyph}!FTBufferGlyph@{FTBufferGlyph}}
+\subsubsection[{$\sim$FTBufferGlyph}]{\setlength{\rightskip}{0pt plus 5cm}virtual FTBufferGlyph::$\sim$FTBufferGlyph ()\hspace{0.3cm}{\tt  [virtual]}}\label{classFTBufferGlyph_b87dedb20a3216d24535958e2f2e0460}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FTBufferGlyph@{FTBufferGlyph}!Render@{Render}}
+\index{Render@{Render}!FTBufferGlyph@{FTBufferGlyph}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf FTPoint}\& FTBufferGlyph::Render (const {\bf FTPoint} \& {\em pen}, \/  int {\em renderMode})\hspace{0.3cm}{\tt  [virtual]}}\label{classFTBufferGlyph_33bc5176b9c5739f20d634eca04a45a5}
+
+
+Render this glyph at the current pen position. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pen}]The current pen position. \item[{\em renderMode}]Render mode to display \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The advance distance for this glyph. \end{Desc}
+
+
+Implements {\bf FTGlyph} \doxyref{}{p.}{classFTGlyph_bcf3aef56d4bf022f6d95d5e287800df}.
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+{\bf FTBufferGlyph.h}\end{CompactItemize}

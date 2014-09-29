@@ -1,0 +1,661 @@
+\begin{theindex}
+
+  \item {$\sim$FTBBox}
+    \subitem {FTBBox}, 22
+  \item {$\sim$FTBitmapFont}
+    \subitem {FTBitmapFont}, 26
+  \item {$\sim$FTBitmapGlyph}
+    \subitem {FTBitmapGlyph}, 27
+  \item {$\sim$FTBuffer}
+    \subitem {FTBuffer}, 29
+  \item {$\sim$FTBufferFont}
+    \subitem {FTBufferFont}, 33
+  \item {$\sim$FTBufferGlyph}
+    \subitem {FTBufferGlyph}, 34
+  \item {$\sim$FTExtrudeFont}
+    \subitem {FTExtrudeFont}, 37
+  \item {$\sim$FTExtrudeGlyph}
+    \subitem {FTExtrudeGlyph}, 38
+  \item {$\sim$FTFont}
+    \subitem {FTFont}, 43
+  \item {$\sim$FTGlyph}
+    \subitem {FTGlyph}, 52
+  \item {$\sim$FTLayout}
+    \subitem {FTLayout}, 55
+  \item {$\sim$FTOutlineFont}
+    \subitem {FTOutlineFont}, 58
+  \item {$\sim$FTOutlineGlyph}
+    \subitem {FTOutlineGlyph}, 59
+  \item {$\sim$FTPixmapFont}
+    \subitem {FTPixmapFont}, 62
+  \item {$\sim$FTPixmapGlyph}
+    \subitem {FTPixmapGlyph}, 63
+  \item {$\sim$FTPolygonFont}
+    \subitem {FTPolygonFont}, 73
+  \item {$\sim$FTPolygonGlyph}
+    \subitem {FTPolygonGlyph}, 74
+  \item {$\sim$FTSimpleLayout}
+    \subitem {FTSimpleLayout}, 77
+  \item {$\sim$FTTextureFont}
+    \subitem {FTTextureFont}, 81
+  \item {$\sim$FTTextureGlyph}
+    \subitem {FTTextureGlyph}, 82
+
+  \indexspace
+
+  \item {Advance}
+    \subitem {FTFont}, 43
+    \subitem {FTGlyph}, 52
+  \item {ALIGN\_\-CENTER}
+    \subitem {FTGL}, 19
+  \item {ALIGN\_\-JUSTIFY}
+    \subitem {FTGL}, 19
+  \item {ALIGN\_\-LEFT}
+    \subitem {FTGL}, 19
+  \item {ALIGN\_\-RIGHT}
+    \subitem {FTGL}, 19
+  \item {Ascender}
+    \subitem {FTFont}, 43
+  \item {Attach}
+    \subitem {FTFont}, 44
+
+  \indexspace
+
+  \item {BBox}
+    \subitem {FTFont}, 44, 45
+    \subitem {FTGlyph}, 52
+    \subitem {FTLayout}, 55
+    \subitem {FTSimpleLayout}, 77
+
+  \indexspace
+
+  \item {CharMap}
+    \subitem {FTFont}, 46
+  \item {CharMapCount}
+    \subitem {FTFont}, 46
+  \item {CharMapList}
+    \subitem {FTFont}, 46
+
+  \indexspace
+
+  \item {Depth}
+    \subitem {FTFont}, 46
+  \item {Descender}
+    \subitem {FTFont}, 46
+
+  \indexspace
+
+  \item {Error}
+    \subitem {FTFont}, 47
+    \subitem {FTGlyph}, 52
+    \subitem {FTLayout}, 56
+
+  \indexspace
+
+  \item {FaceSize}
+    \subitem {FTFont}, 47
+  \item {faq.dox}, 85
+  \item {FTBBox}, 21
+    \subitem {$\sim$FTBBox}, 22
+    \subitem {FTBBox}, 22
+    \subitem {Invalidate}, 23
+    \subitem {IsValid}, 23
+    \subitem {Lower}, 23
+    \subitem {operator+=}, 23
+    \subitem {SetDepth}, 23
+    \subitem {Upper}, 23
+  \item {FTBBox.h}, 86
+  \item {FTBitmapFont}, 25
+    \subitem {$\sim$FTBitmapFont}, 26
+    \subitem {FTBitmapFont}, 25, 26
+    \subitem {FTFont}, 49
+    \subitem {MakeGlyph}, 26
+  \item {FTBitmapGlyph}, 27
+    \subitem {$\sim$FTBitmapGlyph}, 27
+    \subitem {FTBitmapGlyph}, 27
+    \subitem {FTGlyph}, 53
+    \subitem {Render}, 28
+  \item {FTBitmapGlyph.h}, 87
+    \subitem {ftglCreateBitmapGlyph}, 87
+  \item {FTBuffer}, 29
+    \subitem {$\sim$FTBuffer}, 29
+    \subitem {FTBuffer}, 29
+    \subitem {Height}, 30
+    \subitem {Pixels}, 30
+    \subitem {Pos}, 30
+    \subitem {Size}, 30
+    \subitem {Width}, 30
+  \item {FTBuffer.h}, 88
+  \item {FTBufferFont}, 32
+    \subitem {$\sim$FTBufferFont}, 33
+    \subitem {FTBufferFont}, 32, 33
+    \subitem {FTFont}, 49
+    \subitem {MakeGlyph}, 33
+  \item {FTBufferFont.h}, 89
+    \subitem {ftglCreateBufferFont}, 89
+  \item {FTBufferGlyph}, 34
+    \subitem {$\sim$FTBufferGlyph}, 34
+    \subitem {FTBufferGlyph}, 34
+    \subitem {FTGlyph}, 53
+    \subitem {Render}, 35
+  \item {FTBufferGlyph.h}, 90
+  \item {FTExtrdGlyph}
+    \subitem {FTExtrdGlyph.h}, 91
+  \item {FTExtrdGlyph.h}, 91
+    \subitem {FTExtrdGlyph}, 91
+    \subitem {ftglCreateExtrudeGlyph}, 91
+  \item {FTExtrudeFont}, 36
+    \subitem {$\sim$FTExtrudeFont}, 37
+    \subitem {FTExtrudeFont}, 36, 37
+    \subitem {FTFont}, 49
+    \subitem {MakeGlyph}, 37
+  \item {FTExtrudeGlyph}, 38
+    \subitem {$\sim$FTExtrudeGlyph}, 38
+    \subitem {FTExtrudeGlyph}, 38
+    \subitem {FTGlyph}, 53
+    \subitem {Render}, 39
+  \item {FTFont}, 40
+    \subitem {$\sim$FTFont}, 43
+    \subitem {Advance}, 43
+    \subitem {Ascender}, 43
+    \subitem {Attach}, 44
+    \subitem {BBox}, 44, 45
+    \subitem {CharMap}, 46
+    \subitem {CharMapCount}, 46
+    \subitem {CharMapList}, 46
+    \subitem {Depth}, 46
+    \subitem {Descender}, 46
+    \subitem {Error}, 47
+    \subitem {FaceSize}, 47
+    \subitem {FTBitmapFont}, 49
+    \subitem {FTBufferFont}, 49
+    \subitem {FTExtrudeFont}, 49
+    \subitem {FTFont}, 42
+    \subitem {FTFontImpl}, 50
+    \subitem {FTOutlineFont}, 50
+    \subitem {FTPixmapFont}, 50
+    \subitem {FTPolygonFont}, 50
+    \subitem {FTTextureFont}, 50
+    \subitem {GlyphLoadFlags}, 47
+    \subitem {LineHeight}, 47
+    \subitem {MakeGlyph}, 48
+    \subitem {Outset}, 48
+    \subitem {Render}, 48, 49
+    \subitem {UseDisplayList}, 49
+  \item {FTFont.h}, 92
+    \subitem {ftglAttachData}, 93
+    \subitem {ftglAttachFile}, 93
+    \subitem {ftglCreateCustomFont}, 94
+    \subitem {ftglDestroyFont}, 94
+    \subitem {FTGLfont}, 93
+    \subitem {ftglGetFontAdvance}, 94
+    \subitem {ftglGetFontAscender}, 94
+    \subitem {ftglGetFontBBox}, 95
+    \subitem {ftglGetFontCharMapCount}, 95
+    \subitem {ftglGetFontCharMapList}, 95
+    \subitem {ftglGetFontDescender}, 95
+    \subitem {ftglGetFontError}, 96
+    \subitem {ftglGetFontFaceSize}, 96
+    \subitem {ftglGetFontLineHeight}, 96
+    \subitem {ftglRenderFont}, 96
+    \subitem {ftglSetFontCharMap}, 97
+    \subitem {ftglSetFontDepth}, 97
+    \subitem {ftglSetFontDisplayList}, 97
+    \subitem {ftglSetFontFaceSize}, 97
+    \subitem {ftglSetFontOutset}, 98
+  \item {FTFontImpl}
+    \subitem {FTFont}, 50
+  \item {FTGL}, 19
+    \subitem {ALIGN\_\-CENTER}, 19
+    \subitem {ALIGN\_\-JUSTIFY}, 19
+    \subitem {ALIGN\_\-LEFT}, 19
+    \subitem {ALIGN\_\-RIGHT}, 19
+    \subitem {RENDER\_\-ALL}, 19
+    \subitem {RENDER\_\-BACK}, 19
+    \subitem {RENDER\_\-FRONT}, 19
+    \subitem {RENDER\_\-SIDE}, 19
+    \subitem {RenderMode}, 19
+    \subitem {TextAlignment}, 19
+  \item {ftgl.dox}, 99
+  \item {ftgl.h}, 100
+    \subitem {FTGL\_\-BEGIN\_\-C\_\-DECLS}, 101
+    \subitem {FTGL\_\-DOUBLE}, 101
+    \subitem {FTGL\_\-END\_\-C\_\-DECLS}, 101
+    \subitem {FTGL\_\-EXPORT}, 101
+    \subitem {FTGL\_\-FLOAT}, 101
+  \item {FTGL\_\-BEGIN\_\-C\_\-DECLS}
+    \subitem {ftgl.h}, 101
+  \item {FTGL\_\-DOUBLE}
+    \subitem {ftgl.h}, 101
+  \item {FTGL\_\-END\_\-C\_\-DECLS}
+    \subitem {ftgl.h}, 101
+  \item {FTGL\_\-EXPORT}
+    \subitem {ftgl.h}, 101
+  \item {FTGL\_\-FLOAT}
+    \subitem {ftgl.h}, 101
+  \item {ftglAttachData}
+    \subitem {FTFont.h}, 93
+  \item {ftglAttachFile}
+    \subitem {FTFont.h}, 93
+  \item {FTGLBitmapFont}
+    \subitem {FTGLBitmapFont.h}, 102
+  \item {FTGLBitmapFont.h}, 102
+    \subitem {FTGLBitmapFont}, 102
+    \subitem {ftglCreateBitmapFont}, 102
+  \item {ftglCreateBitmapFont}
+    \subitem {FTGLBitmapFont.h}, 102
+  \item {ftglCreateBitmapGlyph}
+    \subitem {FTBitmapGlyph.h}, 87
+  \item {ftglCreateBufferFont}
+    \subitem {FTBufferFont.h}, 89
+  \item {ftglCreateCustomFont}
+    \subitem {FTFont.h}, 94
+  \item {ftglCreateCustomGlyph}
+    \subitem {FTGlyph.h}, 109
+  \item {ftglCreateExtrudeFont}
+    \subitem {FTGLExtrdFont.h}, 103
+  \item {ftglCreateExtrudeGlyph}
+    \subitem {FTExtrdGlyph.h}, 91
+  \item {ftglCreateOutlineFont}
+    \subitem {FTGLOutlineFont.h}, 104
+  \item {ftglCreateOutlineGlyph}
+    \subitem {FTOutlineGlyph.h}, 113
+  \item {ftglCreatePixmapFont}
+    \subitem {FTGLPixmapFont.h}, 105
+  \item {ftglCreatePixmapGlyph}
+    \subitem {FTPixmapGlyph.h}, 114
+  \item {ftglCreatePolygonFont}
+    \subitem {FTGLPolygonFont.h}, 106
+  \item {ftglCreatePolygonGlyph}
+    \subitem {FTPolyGlyph.h}, 116
+  \item {ftglCreateSimpleLayout}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {ftglCreateTextureFont}
+    \subitem {FTGLTextureFont.h}, 107
+  \item {ftglCreateTextureGlyph}
+    \subitem {FTTextureGlyph.h}, 118
+  \item {ftglDestroyFont}
+    \subitem {FTFont.h}, 94
+  \item {ftglDestroyGlyph}
+    \subitem {FTGlyph.h}, 109
+  \item {ftglDestroyLayout}
+    \subitem {FTLayout.h}, 111
+  \item {FTGLExtrdFont}
+    \subitem {FTGLExtrdFont.h}, 103
+  \item {FTGLExtrdFont.h}, 103
+    \subitem {ftglCreateExtrudeFont}, 103
+    \subitem {FTGLExtrdFont}, 103
+  \item {FTGLfont}
+    \subitem {FTFont.h}, 93
+  \item {ftglGetFontAdvance}
+    \subitem {FTFont.h}, 94
+  \item {ftglGetFontAscender}
+    \subitem {FTFont.h}, 94
+  \item {ftglGetFontBBox}
+    \subitem {FTFont.h}, 95
+  \item {ftglGetFontCharMapCount}
+    \subitem {FTFont.h}, 95
+  \item {ftglGetFontCharMapList}
+    \subitem {FTFont.h}, 95
+  \item {ftglGetFontDescender}
+    \subitem {FTFont.h}, 95
+  \item {ftglGetFontError}
+    \subitem {FTFont.h}, 96
+  \item {ftglGetFontFaceSize}
+    \subitem {FTFont.h}, 96
+  \item {ftglGetFontLineHeight}
+    \subitem {FTFont.h}, 96
+  \item {ftglGetGlyphAdvance}
+    \subitem {FTGlyph.h}, 109
+  \item {ftglGetGlyphBBox}
+    \subitem {FTGlyph.h}, 109
+  \item {ftglGetGlyphError}
+    \subitem {FTGlyph.h}, 109
+  \item {ftglGetLayoutAlignement}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {ftglGetLayoutBBox}
+    \subitem {FTLayout.h}, 111
+  \item {ftglGetLayoutError}
+    \subitem {FTLayout.h}, 112
+  \item {ftglGetLayoutFont}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {ftglGetLayoutLineLength}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {ftglGetLayoutLineSpacing}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {FTGLglyph}
+    \subitem {FTGlyph.h}, 108
+  \item {FTGLlayout}
+    \subitem {FTLayout.h}, 111
+  \item {FTGLOutlineFont}
+    \subitem {FTGLOutlineFont.h}, 104
+  \item {FTGLOutlineFont.h}, 104
+    \subitem {ftglCreateOutlineFont}, 104
+    \subitem {FTGLOutlineFont}, 104
+  \item {FTGLPixmapFont}
+    \subitem {FTGLPixmapFont.h}, 105
+  \item {FTGLPixmapFont.h}, 105
+    \subitem {ftglCreatePixmapFont}, 105
+    \subitem {FTGLPixmapFont}, 105
+  \item {FTGLPolygonFont}
+    \subitem {FTGLPolygonFont.h}, 106
+  \item {FTGLPolygonFont.h}, 106
+    \subitem {ftglCreatePolygonFont}, 106
+    \subitem {FTGLPolygonFont}, 106
+  \item {ftglRenderFont}
+    \subitem {FTFont.h}, 96
+  \item {ftglRenderGlyph}
+    \subitem {FTGlyph.h}, 110
+  \item {ftglRenderLayout}
+    \subitem {FTLayout.h}, 112
+  \item {ftglSetFontCharMap}
+    \subitem {FTFont.h}, 97
+  \item {ftglSetFontDepth}
+    \subitem {FTFont.h}, 97
+  \item {ftglSetFontDisplayList}
+    \subitem {FTFont.h}, 97
+  \item {ftglSetFontFaceSize}
+    \subitem {FTFont.h}, 97
+  \item {ftglSetFontOutset}
+    \subitem {FTFont.h}, 98
+  \item {ftglSetLayoutAlignment}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {ftglSetLayoutFont}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {ftglSetLayoutLineLength}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {ftglSetLayoutLineSpacing}
+    \subitem {FTSimpleLayout.h}, 117
+  \item {FTGLTextureFont}
+    \subitem {FTGLTextureFont.h}, 107
+  \item {FTGLTextureFont.h}, 107
+    \subitem {ftglCreateTextureFont}, 107
+    \subitem {FTGLTextureFont}, 107
+  \item {FTGlyph}, 51
+    \subitem {$\sim$FTGlyph}, 52
+    \subitem {Advance}, 52
+    \subitem {BBox}, 52
+    \subitem {Error}, 52
+    \subitem {FTBitmapGlyph}, 53
+    \subitem {FTBufferGlyph}, 53
+    \subitem {FTExtrudeGlyph}, 53
+    \subitem {FTGlyph}, 52
+    \subitem {FTOutlineGlyph}, 53
+    \subitem {FTPixmapGlyph}, 53
+    \subitem {FTPolygonGlyph}, 53
+    \subitem {FTTextureGlyph}, 53
+    \subitem {Render}, 52
+  \item {FTGlyph.h}, 108
+    \subitem {ftglCreateCustomGlyph}, 109
+    \subitem {ftglDestroyGlyph}, 109
+    \subitem {ftglGetGlyphAdvance}, 109
+    \subitem {ftglGetGlyphBBox}, 109
+    \subitem {ftglGetGlyphError}, 109
+    \subitem {FTGLglyph}, 108
+    \subitem {ftglRenderGlyph}, 110
+  \item {FTLayout}, 54
+    \subitem {$\sim$FTLayout}, 55
+    \subitem {BBox}, 55
+    \subitem {Error}, 56
+    \subitem {FTLayout}, 55
+    \subitem {FTSimpleLayout}, 56
+    \subitem {Render}, 56
+  \item {FTLayout.h}, 111
+    \subitem {ftglDestroyLayout}, 111
+    \subitem {ftglGetLayoutBBox}, 111
+    \subitem {ftglGetLayoutError}, 112
+    \subitem {FTGLlayout}, 111
+    \subitem {ftglRenderLayout}, 112
+  \item {FTOutlineFont}, 57
+    \subitem {$\sim$FTOutlineFont}, 58
+    \subitem {FTFont}, 50
+    \subitem {FTOutlineFont}, 57, 58
+    \subitem {MakeGlyph}, 58
+  \item {FTOutlineGlyph}, 59
+    \subitem {$\sim$FTOutlineGlyph}, 59
+    \subitem {FTGlyph}, 53
+    \subitem {FTOutlineGlyph}, 59
+    \subitem {Render}, 60
+  \item {FTOutlineGlyph.h}, 113
+    \subitem {ftglCreateOutlineGlyph}, 113
+  \item {FTPixmapFont}, 61
+    \subitem {$\sim$FTPixmapFont}, 62
+    \subitem {FTFont}, 50
+    \subitem {FTPixmapFont}, 61, 62
+    \subitem {MakeGlyph}, 62
+  \item {FTPixmapGlyph}, 63
+    \subitem {$\sim$FTPixmapGlyph}, 63
+    \subitem {FTGlyph}, 53
+    \subitem {FTPixmapGlyph}, 63
+    \subitem {Render}, 64
+  \item {FTPixmapGlyph.h}, 114
+    \subitem {ftglCreatePixmapGlyph}, 114
+  \item {FTPoint}, 65
+    \subitem {FTPoint}, 66
+    \subitem {Normalise}, 67
+    \subitem {operator const FTGL\_\-DOUBLE $\ast$}, 67
+    \subitem {operator$\ast$}, 67, 70
+    \subitem {operator$^\wedge$}, 68
+    \subitem {operator+}, 67
+    \subitem {operator+=}, 68
+    \subitem {operator-}, 68
+    \subitem {operator-=}, 68
+    \subitem {operator==}, 71
+    \subitem {X}, 69
+    \subitem {Xf}, 69
+    \subitem {Y}, 69
+    \subitem {Yf}, 69
+    \subitem {Z}, 69, 70
+    \subitem {Zf}, 70
+  \item {FTPoint.h}, 115
+  \item {FTPolyGlyph}
+    \subitem {FTPolyGlyph.h}, 116
+  \item {FTPolyGlyph.h}, 116
+    \subitem {ftglCreatePolygonGlyph}, 116
+    \subitem {FTPolyGlyph}, 116
+  \item {FTPolygonFont}, 72
+    \subitem {$\sim$FTPolygonFont}, 73
+    \subitem {FTFont}, 50
+    \subitem {FTPolygonFont}, 72, 73
+    \subitem {MakeGlyph}, 73
+  \item {FTPolygonGlyph}, 74
+    \subitem {$\sim$FTPolygonGlyph}, 74
+    \subitem {FTGlyph}, 53
+    \subitem {FTPolygonGlyph}, 74
+    \subitem {Render}, 75
+  \item {FTSimpleLayout}, 76
+    \subitem {$\sim$FTSimpleLayout}, 77
+    \subitem {BBox}, 77
+    \subitem {FTLayout}, 56
+    \subitem {FTSimpleLayout}, 77
+    \subitem {GetAlignment}, 78
+    \subitem {GetFont}, 78
+    \subitem {GetLineLength}, 78
+    \subitem {GetLineSpacing}, 78
+    \subitem {Render}, 78
+    \subitem {SetAlignment}, 79
+    \subitem {SetFont}, 79
+    \subitem {SetLineLength}, 79
+    \subitem {SetLineSpacing}, 79
+  \item {FTSimpleLayout.h}, 117
+    \subitem {ftglCreateSimpleLayout}, 117
+    \subitem {ftglGetLayoutAlignement}, 117
+    \subitem {ftglGetLayoutFont}, 117
+    \subitem {ftglGetLayoutLineLength}, 117
+    \subitem {ftglGetLayoutLineSpacing}, 117
+    \subitem {ftglSetLayoutAlignment}, 117
+    \subitem {ftglSetLayoutFont}, 117
+    \subitem {ftglSetLayoutLineLength}, 117
+    \subitem {ftglSetLayoutLineSpacing}, 117
+  \item {FTTextureFont}, 80
+    \subitem {$\sim$FTTextureFont}, 81
+    \subitem {FTFont}, 50
+    \subitem {FTTextureFont}, 80, 81
+    \subitem {MakeGlyph}, 81
+  \item {FTTextureGlyph}, 82
+    \subitem {$\sim$FTTextureGlyph}, 82
+    \subitem {FTGlyph}, 53
+    \subitem {FTTextureGlyph}, 82
+    \subitem {Render}, 83
+  \item {FTTextureGlyph.h}, 118
+    \subitem {ftglCreateTextureGlyph}, 118
+
+  \indexspace
+
+  \item {GetAlignment}
+    \subitem {FTSimpleLayout}, 78
+  \item {GetFont}
+    \subitem {FTSimpleLayout}, 78
+  \item {GetLineLength}
+    \subitem {FTSimpleLayout}, 78
+  \item {GetLineSpacing}
+    \subitem {FTSimpleLayout}, 78
+  \item {GlyphLoadFlags}
+    \subitem {FTFont}, 47
+
+  \indexspace
+
+  \item {Height}
+    \subitem {FTBuffer}, 30
+
+  \indexspace
+
+  \item {Invalidate}
+    \subitem {FTBBox}, 23
+  \item {IsValid}
+    \subitem {FTBBox}, 23
+
+  \indexspace
+
+  \item {LineHeight}
+    \subitem {FTFont}, 47
+  \item {Lower}
+    \subitem {FTBBox}, 23
+
+  \indexspace
+
+  \item {MakeGlyph}
+    \subitem {FTBitmapFont}, 26
+    \subitem {FTBufferFont}, 33
+    \subitem {FTExtrudeFont}, 37
+    \subitem {FTFont}, 48
+    \subitem {FTOutlineFont}, 58
+    \subitem {FTPixmapFont}, 62
+    \subitem {FTPolygonFont}, 73
+    \subitem {FTTextureFont}, 81
+
+  \indexspace
+
+  \item {Normalise}
+    \subitem {FTPoint}, 67
+
+  \indexspace
+
+  \item {operator const FTGL\_\-DOUBLE $\ast$}
+    \subitem {FTPoint}, 67
+  \item {operator$\ast$}
+    \subitem {FTPoint}, 67, 70
+  \item {operator$^\wedge$}
+    \subitem {FTPoint}, 68
+  \item {operator+}
+    \subitem {FTPoint}, 67
+  \item {operator+=}
+    \subitem {FTBBox}, 23
+    \subitem {FTPoint}, 68
+  \item {operator-}
+    \subitem {FTPoint}, 68
+  \item {operator-=}
+    \subitem {FTPoint}, 68
+  \item {operator==}
+    \subitem {FTPoint}, 71
+  \item {Outset}
+    \subitem {FTFont}, 48
+
+  \indexspace
+
+  \item {Pixels}
+    \subitem {FTBuffer}, 30
+  \item {Pos}
+    \subitem {FTBuffer}, 30
+  \item {projects\_\-using\_\-ftgl.txt}, 119
+
+  \indexspace
+
+  \item {Render}
+    \subitem {FTBitmapGlyph}, 28
+    \subitem {FTBufferGlyph}, 35
+    \subitem {FTExtrudeGlyph}, 39
+    \subitem {FTFont}, 48, 49
+    \subitem {FTGlyph}, 52
+    \subitem {FTLayout}, 56
+    \subitem {FTOutlineGlyph}, 60
+    \subitem {FTPixmapGlyph}, 64
+    \subitem {FTPolygonGlyph}, 75
+    \subitem {FTSimpleLayout}, 78
+    \subitem {FTTextureGlyph}, 83
+  \item {RENDER\_\-ALL}
+    \subitem {FTGL}, 19
+  \item {RENDER\_\-BACK}
+    \subitem {FTGL}, 19
+  \item {RENDER\_\-FRONT}
+    \subitem {FTGL}, 19
+  \item {RENDER\_\-SIDE}
+    \subitem {FTGL}, 19
+  \item {RenderMode}
+    \subitem {FTGL}, 19
+
+  \indexspace
+
+  \item {SetAlignment}
+    \subitem {FTSimpleLayout}, 79
+  \item {SetDepth}
+    \subitem {FTBBox}, 23
+  \item {SetFont}
+    \subitem {FTSimpleLayout}, 79
+  \item {SetLineLength}
+    \subitem {FTSimpleLayout}, 79
+  \item {SetLineSpacing}
+    \subitem {FTSimpleLayout}, 79
+  \item {Size}
+    \subitem {FTBuffer}, 30
+
+  \indexspace
+
+  \item {TextAlignment}
+    \subitem {FTGL}, 19
+  \item {tutorial.dox}, 120
+
+  \indexspace
+
+  \item {Upper}
+    \subitem {FTBBox}, 23
+  \item {UseDisplayList}
+    \subitem {FTFont}, 49
+
+  \indexspace
+
+  \item {Width}
+    \subitem {FTBuffer}, 30
+
+  \indexspace
+
+  \item {X}
+    \subitem {FTPoint}, 69
+  \item {Xf}
+    \subitem {FTPoint}, 69
+
+  \indexspace
+
+  \item {Y}
+    \subitem {FTPoint}, 69
+  \item {Yf}
+    \subitem {FTPoint}, 69
+
+  \indexspace
+
+  \item {Z}
+    \subitem {FTPoint}, 69, 70
+  \item {Zf}
+    \subitem {FTPoint}, 70
+
+\end{theindex}
